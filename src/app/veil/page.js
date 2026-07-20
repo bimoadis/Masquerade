@@ -323,7 +323,7 @@ export default function VeilPage() {
           <div className="eyebrow reveal is-visible">VEIL · DARK WEB OSINT SCANNER</div>
           <h1 className="reveal is-visible" style={{ margin: '20px 0 20px' }}>NAME THE<br />TARGET</h1>
           <p className="body-text reveal is-visible" style={{ maxWidth: '540px' }}>
-            Domain, email, brand name, or wallet address. VEIL sweeps the dark web's
+            Domain, email, brand name, or wallet address. VEIL sweeps the dark web&apos;s
             public layer and returns what it finds — decoded, scored, and matched
             against the Cipher Catalog.
           </p>
