@@ -12,7 +12,7 @@ const placeholders = {
   wallet: 'e.g. 7xKX...gAsU (Solana address)'
 };
 
-const API_BASE = 'https://backend-cf.caesarzach.workers.dev';
+const API_BASE = '/api';
 
 function findCatalogRefs(text) {
   const refs = [];
