@@ -1,17 +1,32 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Suspense, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { CIPHER_CATALOG, CATALOG_CATEGORIES } from '@/data/catalogData';
 import skillsData from '@/data/skills.json';
 
-export default function CatalogPage() {
+function CatalogContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedTool, setSelectedTool] = useState(null);
   const [showFullDetails, setShowFullDetails] = useState(false);
   const [copiedState, setCopiedState] = useState(false);
+  
+  const searchParams = useSearchParams();
+  const searchParam = searchParams.get('search');
 
-  React.useEffect(() => {
+  useEffect(() => {
+    if (searchParam) {
+      setSearchQuery(searchParam);
+      const matched = CIPHER_CATALOG.find(t => t.name.toLowerCase() === searchParam.toLowerCase());
+      if (matched) {
+        setSelectedTool(matched);
+        setShowFullDetails(true);
+      }
+    }
+  }, [searchParam]);
+
+  useEffect(() => {
     if (selectedTool) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -328,5 +343,13 @@ export default function CatalogPage() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function CatalogPage() {
+  return (
+    <Suspense fallback={<div className="container py-20 text-center font-mono opacity-60">LOADING CATALOG...</div>}>
+      <CatalogContent />
+    </Suspense>
   );
 }
