@@ -11,6 +11,17 @@ export default function CatalogPage() {
   const [showFullDetails, setShowFullDetails] = useState(false);
   const [copiedState, setCopiedState] = useState(false);
 
+  React.useEffect(() => {
+    if (selectedTool) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedTool]);
+
   const filteredCatalog = useMemo(() => {
     return CIPHER_CATALOG.filter((tool) => {
       const matchesCat = activeCategory === 'all' || tool.category === activeCategory;
