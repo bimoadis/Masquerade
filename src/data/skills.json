@@ -1,0 +1,5860 @@
+[
+  {
+    "name": "Nmap",
+    "category": "Information Gathering",
+    "description": "Industry-standard network scanner for host discovery, port scanning, and service/version detection across a target network.",
+    "url": "https://github.com/nmap/nmap",
+    "tier": "P0",
+    "github": {
+      "language": "C",
+      "license": "NOASSERTION",
+      "stars": 13218,
+      "forks": 2856,
+      "topics": [
+        "asynchronous",
+        "c-plus-plus",
+        "libpcap",
+        "linux",
+        "lua",
+        "machine-learning",
+        "netcat",
+        "network-discovery",
+        "nmap",
+        "osx",
+        "pcre",
+        "ping",
+        "port-scanner",
+        "security",
+        "service-discovery",
+        "socket",
+        "windows"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/nmap/nmap.git",
+        "cd nmap",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "nmap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Nmap",
+          "command": "nmap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "ASYNCHRONOUS",
+      "C-PLUS-PLUS",
+      "LIBPCAP"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "theHarvester",
+    "category": "Information Gathering",
+    "description": "OSINT reconnaissance tool that gathers emails, subdomains, hosts, and employee names from public sources and search engines.",
+    "url": "https://github.com/laramies/theHarvester",
+    "tier": "P0",
+    "github": {
+      "language": "Python",
+      "license": "Unknown",
+      "stars": 16844,
+      "forks": 2534,
+      "topics": [
+        "blueteam",
+        "discovery",
+        "emails",
+        "information-gathering",
+        "osint",
+        "python",
+        "recon",
+        "reconnaissance",
+        "redteam",
+        "subdomain-enumeration"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/laramies/theHarvester.git",
+        "cd theHarvester",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "theharvester --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with theHarvester",
+          "command": "theharvester target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "BLUETEAM",
+      "DISCOVERY",
+      "EMAILS"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Amass",
+    "category": "Information Gathering",
+    "description": "In-depth attack surface mapping tool for subdomain enumeration, DNS resolution, and network asset discovery.",
+    "url": "https://github.com/owasp-amass/amass",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "NOASSERTION",
+      "stars": 14851,
+      "forks": 2156,
+      "topics": [
+        "attack-surfaces",
+        "dns",
+        "enumeration",
+        "go",
+        "golang",
+        "information-gathering",
+        "maltego",
+        "network-security",
+        "osint",
+        "osint-reconnaissance",
+        "owasp",
+        "recon",
+        "subdomain"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/owasp-amass/amass@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "amass --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Amass",
+          "command": "amass target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "ATTACK-SURFACES",
+      "DNS",
+      "ENUMERATION"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Masscan",
+    "category": "Information Gathering",
+    "description": "Extremely high-speed port scanner capable of scanning the entire internet address space in minutes.",
+    "url": "https://github.com/robertdavidgraham/masscan",
+    "tier": "P1",
+    "github": {
+      "language": "C",
+      "license": "AGPL-3.0",
+      "stars": 25873,
+      "forks": 3232,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/robertdavidgraham/masscan.git",
+        "cd masscan",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "masscan --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Masscan",
+          "command": "masscan target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "RustScan",
+    "category": "Information Gathering",
+    "description": "Fast modern port scanner written in Rust, designed to pipe results directly into Nmap for deeper analysis.",
+    "url": "https://github.com/RustScan/RustScan",
+    "tier": "P1",
+    "github": {
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "stars": 20132,
+      "forks": 1355,
+      "topics": [
+        "docker",
+        "hacking",
+        "hacktoberfest",
+        "networking",
+        "nmap",
+        "pentesting",
+        "port",
+        "rust",
+        "scanning",
+        "security",
+        "security-tools"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Rust compiler / Cargo"
+    ],
+    "installation": {
+      "method": "cargo",
+      "commands": [
+        "cargo install RustScan"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "rustscan --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with RustScan",
+          "command": "rustscan target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "DOCKER",
+      "HACKING",
+      "HACKTOBERFEST"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Holehe",
+    "category": "Information Gathering",
+    "description": "Checks if an email address is registered on popular websites by exploiting password-reset and registration endpoints.",
+    "url": "https://github.com/megadose/holehe",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 11742,
+      "forks": 1444,
+      "topics": [
+        "ebay",
+        "email",
+        "emails",
+        "information-gathering",
+        "instagram",
+        "open-source-intelligence",
+        "osint",
+        "osint-python",
+        "osint-tools",
+        "pypi",
+        "python",
+        "social-network",
+        "tellonym",
+        "trio",
+        "twitter"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/megadose/holehe.git",
+        "cd holehe",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "holehe --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Holehe",
+          "command": "holehe target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "EBAY",
+      "EMAIL",
+      "EMAILS"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Maigret",
+    "category": "Information Gathering",
+    "description": "Collects a person's digital footprint by searching for their username across hundreds of online platforms.",
+    "url": "https://github.com/soxoj/maigret",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "MIT",
+      "stars": 35575,
+      "forks": 2723,
+      "topics": [
+        "cli",
+        "cybersecurity",
+        "identification",
+        "information-gathering",
+        "infosec",
+        "investigation",
+        "open-source",
+        "osint",
+        "osint-framework",
+        "osint-python",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "scraping",
+        "sherlock",
+        "social-network",
+        "socmint",
+        "username"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/soxoj/maigret.git",
+        "cd maigret",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "maigret --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Maigret",
+          "command": "maigret target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "CLI",
+      "CYBERSECURITY",
+      "IDENTIFICATION"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "httpx",
+    "category": "Information Gathering",
+    "description": "Fast and multi-purpose HTTP toolkit that probes live hosts, technologies, and response metadata at scale.",
+    "url": "https://github.com/projectdiscovery/httpx",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 10186,
+      "forks": 1089,
+      "topics": [
+        "bugbounty",
+        "cli",
+        "cybersecurity",
+        "hacktoberfest",
+        "http",
+        "lib",
+        "osint",
+        "pentest-tool",
+        "pipeline",
+        "ssl-certificate"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/projectdiscovery/httpx@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "httpx --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with httpx",
+          "command": "httpx target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "BUGBOUNTY",
+      "CLI",
+      "CYBERSECURITY"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "SpiderFoot",
+    "category": "Information Gathering",
+    "description": "Automated OSINT reconnaissance platform that aggregates data from over 200 sources into a single footprint report.",
+    "url": "https://github.com/smicallef/spiderfoot",
+    "tier": "P0",
+    "github": {
+      "language": "Python",
+      "license": "MIT",
+      "stars": 19776,
+      "forks": 3221,
+      "topics": [
+        "attacksurface",
+        "cti",
+        "cybersecurity",
+        "footprinting",
+        "hacking",
+        "information-gathering",
+        "information-security",
+        "infosec",
+        "intelligence-gathering",
+        "osint",
+        "osint-framework",
+        "osint-reconnaissance",
+        "osint-tool",
+        "pentesting",
+        "python",
+        "recon",
+        "security-tools",
+        "threat-intelligence",
+        "threatintel"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/smicallef/spiderfoot.git",
+        "cd spiderfoot",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "spiderfoot --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with SpiderFoot",
+          "command": "spiderfoot target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "ATTACKSURFACE",
+      "CTI",
+      "CYBERSECURITY"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Subfinder",
+    "category": "Information Gathering",
+    "description": "Passive subdomain discovery tool that queries multiple public sources to build a target's subdomain map.",
+    "url": "https://github.com/projectdiscovery/subfinder",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 14043,
+      "forks": 1581,
+      "topics": [
+        "bugbounty",
+        "hacking",
+        "hacktoberfest",
+        "osint",
+        "reconnaissance",
+        "subdomain-enumeration",
+        "subdomains"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/projectdiscovery/subfinder@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "subfinder --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Subfinder",
+          "command": "subfinder target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "BUGBOUNTY",
+      "HACKING",
+      "HACKTOBERFEST"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "TruffleHog",
+    "category": "Information Gathering",
+    "description": "Scans git repositories and file systems for accidentally committed secrets, API keys, and credentials.",
+    "url": "https://github.com/trufflesecurity/trufflehog",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "AGPL-3.0",
+      "stars": 27123,
+      "forks": 2499,
+      "topics": [
+        "credentials",
+        "devsecops",
+        "dynamic-analysis",
+        "precommit",
+        "scanning",
+        "secret",
+        "secret-management",
+        "secrets",
+        "security",
+        "security-tools",
+        "trufflehog",
+        "verification"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/trufflesecurity/trufflehog@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "trufflehog --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with TruffleHog",
+          "command": "trufflehog target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "CREDENTIALS",
+      "DEVSECOPS",
+      "DYNAMIC-ANALYSIS"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Gitleaks",
+    "category": "Information Gathering",
+    "description": "Lightweight secret-scanning tool that audits git history for hardcoded passwords, tokens, and private keys.",
+    "url": "https://github.com/gitleaks/gitleaks",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 28211,
+      "forks": 2154,
+      "topics": [
+        "ai-powered",
+        "ci-cd",
+        "cicd",
+        "cli",
+        "data-loss-prevention",
+        "devsecops",
+        "dlp",
+        "git",
+        "gitleaks",
+        "go",
+        "golang",
+        "hacktoberfest",
+        "llm",
+        "llm-inference",
+        "llm-training",
+        "nhi",
+        "open-source",
+        "secret",
+        "security",
+        "security-tools"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/gitleaks/gitleaks@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "gitleaks --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Gitleaks",
+          "command": "gitleaks target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "AI-POWERED",
+      "CI-CD",
+      "CICD"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Dracnmap",
+    "category": "Information Gathering",
+    "description": "Automation wrapper around Nmap that streamlines common reconnaissance scan sequences.",
+    "url": "https://github.com/Screetsec/Dracnmap",
+    "tier": "P2",
+    "github": {
+      "language": "Shell",
+      "license": "GPL-3.0",
+      "stars": 1366,
+      "forks": 290,
+      "topics": [
+        "backbox",
+        "hacker",
+        "hacking",
+        "information-gathering",
+        "kalilinux",
+        "linux",
+        "nmap",
+        "nmap-command",
+        "parrot",
+        "scanning",
+        "tool",
+        "toolshacking"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/Screetsec/Dracnmap.git",
+        "cd Dracnmap",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dracnmap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Dracnmap",
+          "command": "dracnmap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "BACKBOX",
+      "HACKER",
+      "HACKING"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Xerosploit",
+    "category": "Information Gathering",
+    "description": "Penetration testing toolkit for network attacks including scanning, sniffing, and traffic analysis.",
+    "url": "https://github.com/LionSec/xerosploit",
+    "tier": "P2",
+    "github": {
+      "language": "Ruby",
+      "license": "GPL-3.0",
+      "stars": 2193,
+      "forks": 658,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/LionSec/xerosploit.git",
+        "cd xerosploit",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "xerosploit --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Xerosploit",
+          "command": "xerosploit target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "RED HAWK",
+    "category": "Information Gathering",
+    "description": "All-in-one reconnaissance tool combining information gathering, vulnerability scanning, and crawling.",
+    "url": "https://github.com/Tuhinshubhra/RED_HAWK",
+    "tier": "P2",
+    "github": {
+      "language": "PHP",
+      "license": "MIT",
+      "stars": 3714,
+      "forks": 960,
+      "topics": [
+        "admin-scanner",
+        "backups-finder",
+        "cloudflare-detection",
+        "cms-detector",
+        "crawler",
+        "domain-authority-scanner",
+        "geo-ip",
+        "http-header",
+        "information-gathering",
+        "mx-lookup",
+        "page-authority-scanner",
+        "reverse-ip-scan",
+        "scanner",
+        "sql-scanner",
+        "sql-vulnerability-scannig",
+        "subdomain-scanner",
+        "subnet-lookup",
+        "whois-lookup",
+        "wordpress",
+        "wordpress-scanner"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/Tuhinshubhra/RED_HAWK.git",
+        "cd RED_HAWK",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "red hawk --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with RED HAWK",
+          "command": "red hawk target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "ADMIN-SCANNER",
+      "BACKUPS-FINDER",
+      "CLOUDFLARE-DETECTION"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "ReconSpider",
+    "category": "Information Gathering",
+    "description": "OSINT framework that consolidates reconnaissance across IPs, emails, domains, and phone numbers.",
+    "url": "https://github.com/bhavsec/reconspider",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 2740,
+      "forks": 364,
+      "topics": [
+        "automated",
+        "cybersecurity",
+        "framework",
+        "hacking",
+        "information-gathering",
+        "osint",
+        "pentest",
+        "pentesting",
+        "python",
+        "recon",
+        "reconnaissance",
+        "scanner",
+        "security"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/bhavsec/reconspider.git",
+        "cd reconspider",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "reconspider --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with ReconSpider",
+          "command": "reconspider target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "AUTOMATED",
+      "CYBERSECURITY",
+      "FRAMEWORK"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Infoga",
+    "category": "Information Gathering",
+    "description": "Email OSINT tool that gathers account information linked to a target email address from public sources.",
+    "url": "https://github.com/m4ll0k/Infoga",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/m4ll0k/Infoga@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "infoga --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Infoga",
+          "command": "infoga target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "ReconDog",
+    "category": "Information Gathering",
+    "description": "Reconnaissance suite that acts as a passive information-gathering tool for footprinting targets.",
+    "url": "https://github.com/s0md3v/ReconDog",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "Apache-2.0",
+      "stars": 2078,
+      "forks": 358,
+      "topics": [
+        "cms-detector",
+        "honeypot-detector",
+        "information-gathering",
+        "recon",
+        "subdomain-enumeration"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/s0md3v/ReconDog.git",
+        "cd ReconDog",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "recondog --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with ReconDog",
+          "command": "recondog target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "CMS-DETECTOR",
+      "HONEYPOT-DETECTOR",
+      "INFORMATION-GATHERING"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Striker",
+    "category": "Information Gathering",
+    "description": "Offensive reconnaissance tool that automatically performs a chain of scans against a target domain.",
+    "url": "https://github.com/s0md3v/Striker",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 2339,
+      "forks": 457,
+      "topics": [
+        "cloudflare",
+        "cms-detector",
+        "dnsdumpster",
+        "email",
+        "harvester",
+        "information-gathering",
+        "parameter",
+        "recon",
+        "theharvester"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/s0md3v/Striker.git",
+        "cd Striker",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "striker --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Striker",
+          "command": "striker target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "CLOUDFLARE",
+      "CMS-DETECTOR",
+      "DNSDUMPSTER"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "SecretFinder",
+    "category": "Information Gathering",
+    "description": "Searches JavaScript files for exposed API keys, tokens, and other sensitive endpoints.",
+    "url": "https://github.com/m4ll0k/SecretFinder",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 2489,
+      "forks": 434,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/m4ll0k/SecretFinder.git",
+        "cd SecretFinder",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "secretfinder --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with SecretFinder",
+          "command": "secretfinder target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Shodanfy",
+    "category": "Information Gathering",
+    "description": "Command-line client that queries the Shodan search engine for exposed devices and services tied to a target.",
+    "url": "https://github.com/m4ll0k/Shodanfy.py",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/m4ll0k/Shodanfy.py@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "shodanfy --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Shodanfy",
+          "command": "shodanfy target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "rang3r",
+    "category": "Information Gathering",
+    "description": "IP range and CIDR-based information gathering tool for network reconnaissance.",
+    "url": "https://github.com/floriankunushevci/rang3r",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 138,
+      "forks": 31,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/floriankunushevci/rang3r.git",
+        "cd rang3r",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "rang3r --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with rang3r",
+          "command": "rang3r target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Breacher",
+    "category": "Information Gathering",
+    "description": "Locates hidden admin login panels on target web applications.",
+    "url": "https://github.com/s0md3v/Breacher",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "NOASSERTION",
+      "stars": 845,
+      "forks": 265,
+      "topics": [
+        "admin-panel",
+        "cpanel",
+        "cpanl-finder",
+        "directory",
+        "directory-bruteforce",
+        "python"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/s0md3v/Breacher.git",
+        "cd Breacher",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "breacher --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Breacher",
+          "command": "breacher target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Information Gathering",
+      "ADMIN-PANEL",
+      "CPANEL",
+      "CPANL-FINDER"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Hashcat",
+    "category": "Wordlist & Cracking",
+    "description": "World's fastest password recovery tool, using GPU acceleration to crack hashes from captured credential data.",
+    "url": "https://github.com/hashcat/hashcat",
+    "tier": "P0",
+    "github": {
+      "language": "C",
+      "license": "Unknown",
+      "stars": 26366,
+      "forks": 3501,
+      "topics": [
+        "c",
+        "cracking",
+        "cuda",
+        "gpgpu",
+        "hashcat",
+        "hashes",
+        "opencl",
+        "password"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/hashcat/hashcat.git",
+        "cd hashcat",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "hashcat --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Hashcat",
+          "command": "hashcat target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wordlist & Cracking",
+      "C",
+      "CRACKING",
+      "CUDA"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "John the Ripper",
+    "category": "Wordlist & Cracking",
+    "description": "Classic offline password cracker supporting dozens of hash types with dictionary and brute-force modes.",
+    "url": "https://github.com/openwall/john",
+    "tier": "P0",
+    "github": {
+      "language": "C",
+      "license": "NOASSERTION",
+      "stars": 13400,
+      "forks": 2527,
+      "topics": [
+        "assembler",
+        "c",
+        "cracker",
+        "crypt",
+        "fpga",
+        "gpgpu",
+        "gpu",
+        "hash",
+        "john",
+        "jtr",
+        "mpi",
+        "opencl",
+        "openmp",
+        "password",
+        "ripper",
+        "simd"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/openwall/john.git",
+        "cd john",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "john the ripper --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with John the Ripper",
+          "command": "john the ripper target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wordlist & Cracking",
+      "ASSEMBLER",
+      "C",
+      "CRACKER"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "haiti",
+    "category": "Wordlist & Cracking",
+    "description": "Hash type identifier that analyzes a hash string and suggests which algorithm produced it.",
+    "url": "https://github.com/noraj/haiti",
+    "tier": "P1",
+    "github": {
+      "language": "Ruby",
+      "license": "MIT",
+      "stars": 990,
+      "forks": 58,
+      "topics": [
+        "ctf",
+        "ctf-tools",
+        "cyber",
+        "cybersecurity",
+        "digest",
+        "hacking",
+        "hackthebox",
+        "hacktoberfest",
+        "hash",
+        "hashing",
+        "identify",
+        "infosec",
+        "pentest",
+        "pentest-tool",
+        "pentest-tools",
+        "pentesting",
+        "security",
+        "security-tools",
+        "tool",
+        "tryhackme"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/noraj/haiti.git",
+        "cd haiti",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "haiti --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with haiti",
+          "command": "haiti target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wordlist & Cracking",
+      "CTF",
+      "CTF-TOOLS",
+      "CYBER"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Cupp",
+    "category": "Wordlist & Cracking",
+    "description": "Generates targeted wordlists based on personal information about a specific individual for social-engineering audits.",
+    "url": "https://github.com/Mebus/cupp",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 6423,
+      "forks": 2252,
+      "topics": [
+        "dictionary-attack",
+        "password",
+        "password-strength",
+        "weak-passwords",
+        "wordlist",
+        "wordlist-generator"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/Mebus/cupp.git",
+        "cd cupp",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "cupp --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Cupp",
+          "command": "cupp target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wordlist & Cracking",
+      "DICTIONARY-ATTACK",
+      "PASSWORD",
+      "PASSWORD-STRENGTH"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Goblin WordGenerator",
+    "category": "Wordlist & Cracking",
+    "description": "Custom wordlist generator for building password dictionaries from patterns and rules.",
+    "url": "https://github.com/UndeadSec/GoblinWordGenerator",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "BSD-3-Clause",
+      "stars": 188,
+      "forks": 55,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/UndeadSec/GoblinWordGenerator.git",
+        "cd GoblinWordGenerator",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "goblin wordgenerator --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Goblin WordGenerator",
+          "command": "goblin wordgenerator target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wordlist & Cracking"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Airgeddon",
+    "category": "Wireless Attack",
+    "description": "Multi-use Bash script for wireless network auditing, from handshake capture to WPA/WPA2 security testing.",
+    "url": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+    "tier": "P0",
+    "github": {
+      "language": "Shell",
+      "license": "GPL-3.0",
+      "stars": 7860,
+      "forks": 1324,
+      "topics": [
+        "aircrack",
+        "bash",
+        "beef",
+        "denial-of-service",
+        "enterprise",
+        "evil-twin",
+        "hacking",
+        "handshake",
+        "linux",
+        "multi-band",
+        "pentesting",
+        "pixie-dust",
+        "pmkid",
+        "security",
+        "sniffing",
+        "sslstrip",
+        "wep",
+        "wireless",
+        "wpa-wpa2-wpa3",
+        "wps"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git",
+        "cd airgeddon",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "airgeddon --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Airgeddon",
+          "command": "airgeddon target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "AIRCRACK",
+      "BASH",
+      "BEEF"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Bettercap",
+    "category": "Wireless Attack",
+    "description": "Swiss-army-knife framework for WiFi, Bluetooth, and network reconnaissance and man-in-the-middle testing.",
+    "url": "https://github.com/bettercap/bettercap",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "NOASSERTION",
+      "stars": 19534,
+      "forks": 1678,
+      "topics": [
+        "ble",
+        "deauthentication-attack",
+        "dot11",
+        "hacking",
+        "hid",
+        "mitm",
+        "monitoring",
+        "mousejack",
+        "network-attacks",
+        "password-sniffer",
+        "pmkid",
+        "proxy",
+        "redteam",
+        "redteaming",
+        "rogue-ap",
+        "security",
+        "spoofing",
+        "wifi",
+        "wifi-security",
+        "wpa2"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/bettercap/bettercap@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "bettercap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Bettercap",
+          "command": "bettercap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "BLE",
+      "DEAUTHENTICATION-ATTACK",
+      "DOT11"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "hcxdumptool",
+    "category": "Wireless Attack",
+    "description": "Captures WiFi handshakes and PMKID data for offline WPA/WPA2 security analysis.",
+    "url": "https://github.com/ZerBea/hcxdumptool",
+    "tier": "P0",
+    "github": {
+      "language": "C",
+      "license": "MIT",
+      "stars": 2161,
+      "forks": 421,
+      "topics": [
+        "hashcat",
+        "john-the-ripper",
+        "pcap",
+        "pcapng",
+        "penetration-testing-framework",
+        "raspberry-pi",
+        "wifi",
+        "wifi-security"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/ZerBea/hcxdumptool.git",
+        "cd hcxdumptool",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "hcxdumptool --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with hcxdumptool",
+          "command": "hcxdumptool target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "HASHCAT",
+      "JOHN-THE-RIPPER",
+      "PCAP"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "hcxtools",
+    "category": "Wireless Attack",
+    "description": "Companion toolset for converting captured WiFi traffic into crackable hash formats.",
+    "url": "https://github.com/ZerBea/hcxtools",
+    "tier": "P0",
+    "github": {
+      "language": "C",
+      "license": "MIT",
+      "stars": 2410,
+      "forks": 432,
+      "topics": [
+        "handshake",
+        "hashcat",
+        "hccapx",
+        "john-the-ripper",
+        "pcap",
+        "pcapng",
+        "penetration-testing-framework",
+        "raspberry-pi",
+        "wifi",
+        "wifi-security",
+        "wlan",
+        "wlan-traffic",
+        "wpa",
+        "wpa2"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/ZerBea/hcxtools.git",
+        "cd hcxtools",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "hcxtools --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with hcxtools",
+          "command": "hcxtools target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "HANDSHAKE",
+      "HASHCAT",
+      "HCCAPX"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "WiFi-Pumpkin",
+    "category": "Wireless Attack",
+    "description": "Rogue access point framework for simulating WiFi security assessments.",
+    "url": "https://github.com/P0cL4bs/wifipumpkin3",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "Apache-2.0",
+      "stars": 2483,
+      "forks": 350,
+      "topics": [
+        "accesspoint",
+        "deauthentication-attack",
+        "mitm",
+        "proxy-server",
+        "python3",
+        "rogueap",
+        "security",
+        "sniffing",
+        "spoofing",
+        "wifipumpkin3",
+        "wireless"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/P0cL4bs/wifipumpkin3.git",
+        "cd wifipumpkin3",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "wifi-pumpkin --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with WiFi-Pumpkin",
+          "command": "wifi-pumpkin target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "ACCESSPOINT",
+      "DEAUTHENTICATION-ATTACK",
+      "MITM"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Wifite",
+    "category": "Wireless Attack",
+    "description": "Automated wireless auditing tool that attacks multiple WEP/WPA/WPS networks in sequence.",
+    "url": "https://github.com/derv82/wifite2",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "GPL-2.0",
+      "stars": 7979,
+      "forks": 1695,
+      "topics": [
+        "wifi-cracker",
+        "wifi-password",
+        "wifi-security",
+        "wifite"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/derv82/wifite2.git",
+        "cd wifite2",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "wifite --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Wifite",
+          "command": "wifite target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "WIFI-CRACKER",
+      "WIFI-PASSWORD",
+      "WIFI-SECURITY"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Fluxion",
+    "category": "Wireless Attack",
+    "description": "Evil-twin attack framework used to audit WiFi network credential security.",
+    "url": "https://github.com/FluxionNetwork/fluxion",
+    "tier": "P2",
+    "github": {
+      "language": "HTML",
+      "license": "GPL-3.0",
+      "stars": 5842,
+      "forks": 1539,
+      "topics": [
+        "aircrack",
+        "attack",
+        "captive-portal",
+        "capture",
+        "evil-twin",
+        "fakeap",
+        "fluxion",
+        "handshake",
+        "kali",
+        "linset",
+        "social-engineering"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/FluxionNetwork/fluxion.git",
+        "cd fluxion",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "fluxion --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Fluxion",
+          "command": "fluxion target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "AIRCRACK",
+      "ATTACK",
+      "CAPTIVE-PORTAL"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "pixiewps",
+    "category": "Wireless Attack",
+    "description": "Offline WPS PIN recovery tool exploiting weak randomness in some router implementations.",
+    "url": "https://github.com/wiire/pixiewps",
+    "tier": "P2",
+    "github": {
+      "language": "C",
+      "license": "NOASSERTION",
+      "stars": 1724,
+      "forks": 325,
+      "topics": [
+        "hacking-tool",
+        "wifi-security"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/wiire/pixiewps.git",
+        "cd pixiewps",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "pixiewps --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with pixiewps",
+          "command": "pixiewps target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "HACKING-TOOL",
+      "WIFI-SECURITY"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Wifiphisher",
+    "category": "Wireless Attack",
+    "description": "Rogue access point tool for conducting WiFi security awareness and credential-capture assessments.",
+    "url": "https://github.com/wifiphisher/wifiphisher",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 14701,
+      "forks": 2747,
+      "topics": [
+        "access-point",
+        "attack",
+        "malware",
+        "phishing",
+        "python",
+        "redteaming",
+        "rogue",
+        "security",
+        "wifi",
+        "wifiphisher"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/wifiphisher/wifiphisher.git",
+        "cd wifiphisher",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "wifiphisher --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Wifiphisher",
+          "command": "wifiphisher target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Wireless Attack",
+      "ACCESS-POINT",
+      "ATTACK",
+      "MALWARE"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Sqlmap",
+    "category": "SQL Injection",
+    "description": "The definitive open-source tool for detecting and testing SQL injection vulnerabilities in web applications.",
+    "url": "https://github.com/sqlmapproject/sqlmap",
+    "tier": "P0",
+    "github": {
+      "language": "Python",
+      "license": "NOASSERTION",
+      "stars": 37951,
+      "forks": 6316,
+      "topics": [
+        "api-security",
+        "appsec",
+        "database",
+        "database-security",
+        "dbms",
+        "detection",
+        "exploitation",
+        "pentesting",
+        "python",
+        "security-testing",
+        "security-testing-tool",
+        "sql-injection",
+        "sqlinjection",
+        "webapp-security",
+        "webappsec"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/sqlmapproject/sqlmap.git",
+        "cd sqlmap",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "sqlmap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Sqlmap",
+          "command": "sqlmap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "SQL Injection",
+      "API-SECURITY",
+      "APPSEC",
+      "DATABASE"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "NoSqlMap",
+    "category": "SQL Injection",
+    "description": "Automated NoSQL injection and database enumeration testing tool for MongoDB and similar databases.",
+    "url": "https://github.com/codingo/NoSQLMap",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 3325,
+      "forks": 625,
+      "topics": [
+        "bugbounty",
+        "couchdb",
+        "databases",
+        "enumeration",
+        "hacking",
+        "hacking-tool",
+        "hacktoberfest",
+        "mongodb",
+        "mongodb-database",
+        "nosql",
+        "nosql-databases",
+        "offensive-security",
+        "penetration-testing",
+        "redis",
+        "scanner",
+        "security-audit",
+        "security-tools",
+        "security-toolset",
+        "sql-injection",
+        "web-application-security"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/codingo/NoSQLMap.git",
+        "cd NoSQLMap",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "nosqlmap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with NoSqlMap",
+          "command": "nosqlmap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "SQL Injection",
+      "BUGBOUNTY",
+      "COUCHDB",
+      "DATABASES"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "DSSS",
+    "category": "SQL Injection",
+    "description": "Minimal SQL injection scanner in under 100 lines, useful for quick vulnerability triage.",
+    "url": "https://github.com/stamparm/DSSS",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "Unknown",
+      "stars": 874,
+      "forks": 205,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/stamparm/DSSS.git",
+        "cd DSSS",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dsss --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with DSSS",
+          "command": "dsss target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "SQL Injection"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Leviathan",
+    "category": "SQL Injection",
+    "description": "Wide-ranging audit toolkit combining mass scanning with SQL injection and service fingerprinting.",
+    "url": "https://github.com/leviathan-framework/leviathan",
+    "tier": "P2",
+    "github": {
+      "language": "Python",
+      "license": "GPL-3.0",
+      "stars": 1039,
+      "forks": 249,
+      "topics": [
+        "brute-force",
+        "exploitation",
+        "port-scanning",
+        "python",
+        "service-discovery",
+        "sql-injection"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/leviathan-framework/leviathan.git",
+        "cd leviathan",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "leviathan --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Leviathan",
+          "command": "leviathan target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "SQL Injection",
+      "BRUTE-FORCE",
+      "EXPLOITATION",
+      "PORT-SCANNING"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Nuclei",
+    "category": "Web Attack",
+    "description": "Template-based vulnerability scanner that checks web applications against thousands of community-curated CVE and misconfiguration templates.",
+    "url": "https://github.com/projectdiscovery/nuclei",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 29862,
+      "forks": 3619,
+      "topics": [
+        "attack-surface",
+        "cve-scanner",
+        "dast",
+        "hacktoberfest",
+        "nuclei-engine",
+        "security",
+        "security-scanner",
+        "subdomain-takeover",
+        "vulnerability-assessment",
+        "vulnerability-detection",
+        "vulnerability-scanner"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/projectdiscovery/nuclei@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "nuclei --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Nuclei",
+          "command": "nuclei target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "ATTACK-SURFACE",
+      "CVE-SCANNER",
+      "DAST"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "ffuf",
+    "category": "Web Attack",
+    "description": "Fast web fuzzer for directory, parameter, and virtual host discovery on target applications.",
+    "url": "https://github.com/ffuf/ffuf",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 16399,
+      "forks": 1578,
+      "topics": [
+        "fuzzer",
+        "infosec",
+        "pentesting",
+        "web"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/ffuf/ffuf@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "ffuf --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with ffuf",
+          "command": "ffuf target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "FUZZER",
+      "INFOSEC",
+      "PENTESTING"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Feroxbuster",
+    "category": "Web Attack",
+    "description": "Recursive content-discovery tool that brute-forces directories and files across a web application.",
+    "url": "https://github.com/epi052/feroxbuster",
+    "tier": "P0",
+    "github": {
+      "language": "Rust",
+      "license": "MIT",
+      "stars": 7944,
+      "forks": 625,
+      "topics": [
+        "content-discovery",
+        "enumeration",
+        "hacktoberfest",
+        "pentest",
+        "pentesting-tool",
+        "rust",
+        "url-bruteforcer",
+        "web"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Rust compiler / Cargo"
+    ],
+    "installation": {
+      "method": "cargo",
+      "commands": [
+        "cargo install feroxbuster"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "feroxbuster --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Feroxbuster",
+          "command": "feroxbuster target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "CONTENT-DISCOVERY",
+      "ENUMERATION",
+      "HACKTOBERFEST"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Nikto",
+    "category": "Web Attack",
+    "description": "Web server scanner that checks for dangerous files, outdated software, and common misconfigurations.",
+    "url": "https://github.com/sullo/nikto",
+    "tier": "P0",
+    "github": {
+      "language": "Perl",
+      "license": "NOASSERTION",
+      "stars": 10565,
+      "forks": 1448,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/sullo/nikto.git",
+        "cd nikto",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "nikto --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Nikto",
+          "command": "nikto target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Gobuster",
+    "category": "Web Attack",
+    "description": "Directory, DNS, and virtual host brute-forcing tool built for speed.",
+    "url": "https://github.com/OJ/gobuster",
+    "tier": "P0",
+    "github": {
+      "language": "Go",
+      "license": "Apache-2.0",
+      "stars": 13914,
+      "forks": 1594,
+      "topics": [
+        "dns",
+        "go",
+        "pentesting",
+        "tool",
+        "web"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/OJ/gobuster@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "gobuster --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Gobuster",
+          "command": "gobuster target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "DNS",
+      "GO",
+      "PENTESTING"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "OWASP ZAP",
+    "category": "Web Attack",
+    "description": "Full-featured web application security scanner maintained by OWASP, covering both automated and manual testing.",
+    "url": "https://github.com/zaproxy/zaproxy",
+    "tier": "P0",
+    "github": {
+      "language": "Java",
+      "license": "Apache-2.0",
+      "stars": 15442,
+      "forks": 2598,
+      "topics": [
+        "appsec",
+        "dast",
+        "hacktoberfest",
+        "opensource",
+        "security",
+        "security-scanner",
+        "zap",
+        "zap-development",
+        "zaproxy"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/zaproxy/zaproxy.git",
+        "cd zaproxy",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "owasp zap --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with OWASP ZAP",
+          "command": "owasp zap target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "APPSEC",
+      "DAST",
+      "HACKTOBERFEST"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Dirsearch",
+    "category": "Web Attack",
+    "description": "Command-line web path scanner for brute-forcing hidden directories and files.",
+    "url": "https://github.com/maurosoria/dirsearch",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "Unknown",
+      "stars": 14521,
+      "forks": 2437,
+      "topics": [
+        "appsec",
+        "brute",
+        "bug-bounty",
+        "bugbounty",
+        "dirsearch",
+        "enumeration",
+        "fuzzer",
+        "fuzzing",
+        "hacking",
+        "hacking-tool",
+        "infosec",
+        "penetration-testing",
+        "pentest-tool",
+        "pentesting",
+        "python",
+        "red-teaming",
+        "redteam",
+        "scanner",
+        "security",
+        "wordlist"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/maurosoria/dirsearch.git",
+        "cd dirsearch",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dirsearch --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Dirsearch",
+          "command": "dirsearch target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "APPSEC",
+      "BRUTE",
+      "BUG-BOUNTY"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Katana",
+    "category": "Web Attack",
+    "description": "Fast crawling framework for discovering endpoints and application attack surface.",
+    "url": "https://github.com/projectdiscovery/katana",
+    "tier": "P1",
+    "github": {
+      "language": "Go",
+      "license": "MIT",
+      "stars": 17190,
+      "forks": 1160,
+      "topics": [
+        "cli",
+        "crawler",
+        "gocrawler",
+        "hacktoberfest",
+        "headless",
+        "spider-framework",
+        "web-spider"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/projectdiscovery/katana@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "katana --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Katana",
+          "command": "katana target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "CLI",
+      "CRAWLER",
+      "GOCRAWLER"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "wafw00f",
+    "category": "Web Attack",
+    "description": "Fingerprints and identifies which Web Application Firewall (if any) is protecting a target site.",
+    "url": "https://github.com/EnableSecurity/wafw00f",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "BSD-3-Clause",
+      "stars": 6478,
+      "forks": 1050,
+      "topics": [
+        "fingerprint",
+        "waf",
+        "waffit",
+        "web-application-firewall"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/EnableSecurity/wafw00f.git",
+        "cd wafw00f",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "wafw00f --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with wafw00f",
+          "command": "wafw00f target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "FINGERPRINT",
+      "WAF",
+      "WAFFIT"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "testssl.sh",
+    "category": "Web Attack",
+    "description": "Checks a server's TLS/SSL configuration for known vulnerabilities, cipher weaknesses, and certificate issues.",
+    "url": "https://github.com/drwetter/testssl.sh",
+    "tier": "P1",
+    "github": {
+      "language": "Shell",
+      "license": "GPL-2.0",
+      "stars": 9133,
+      "forks": 1137,
+      "topics": [
+        "cipher",
+        "client-simulation",
+        "csv",
+        "ct",
+        "http-header",
+        "ipv6",
+        "json",
+        "kem",
+        "openssl",
+        "pqcrypto",
+        "quic",
+        "ssl",
+        "tls"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/drwetter/testssl.sh.git",
+        "cd testssl.sh",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "testssl.sh --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with testssl.sh",
+          "command": "testssl.sh target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "CIPHER",
+      "CLIENT-SIMULATION",
+      "CSV"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Arjun",
+    "category": "Web Attack",
+    "description": "HTTP parameter discovery tool that finds hidden query and form parameters accepted by an endpoint.",
+    "url": "https://github.com/s0md3v/Arjun",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "stars": 6359,
+      "forks": 858,
+      "topics": [
+        "api-fuzzer",
+        "api-fuzzing",
+        "api-testing",
+        "parameter-discovery",
+        "recon"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/s0md3v/Arjun.git",
+        "cd Arjun",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "arjun --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Arjun",
+          "command": "arjun target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "API-FUZZER",
+      "API-FUZZING",
+      "API-TESTING"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "mitmproxy",
+    "category": "Web Attack",
+    "description": "Interactive proxy for inspecting, modifying, and replaying HTTP/HTTPS traffic during security testing.",
+    "url": "https://github.com/mitmproxy/mitmproxy",
+    "tier": "P0",
+    "github": {
+      "language": "Python",
+      "license": "MIT",
+      "stars": 44382,
+      "forks": 4631,
+      "topics": [
+        "debugging",
+        "http",
+        "http2",
+        "man-in-the-middle",
+        "mitmproxy",
+        "proxy",
+        "python",
+        "security",
+        "ssl",
+        "tls",
+        "websocket"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/mitmproxy/mitmproxy.git",
+        "cd mitmproxy",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "mitmproxy --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with mitmproxy",
+          "command": "mitmproxy target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "DEBUGGING",
+      "HTTP",
+      "HTTP2"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Sublist3r",
+    "category": "Web Attack",
+    "description": "Subdomain enumeration tool that aggregates results from multiple search engines.",
+    "url": "https://github.com/aboul3la/Sublist3r",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "GPL-2.0",
+      "stars": 10989,
+      "forks": 2211,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/aboul3la/Sublist3r.git",
+        "cd Sublist3r",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "sublist3r --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Sublist3r",
+          "command": "sublist3r target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Caido",
+    "category": "Web Attack",
+    "description": "Modern web security auditing toolkit offering proxy interception and automated scanning workflows.",
+    "url": "https://github.com/caido/caido",
+    "tier": "P1",
+    "github": {
+      "language": "Shell",
+      "license": "Unknown",
+      "stars": 2491,
+      "forks": 135,
+      "topics": [
+        "bugbounty",
+        "pentesting",
+        "proxy",
+        "security",
+        "tool"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS"
+    ],
+    "requirements": [
+      "Git",
+      "Make / GCC"
+    ],
+    "installation": {
+      "method": "make",
+      "commands": [
+        "git clone https://github.com/caido/caido.git",
+        "cd caido",
+        "make"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "caido --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Caido",
+          "command": "caido target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "BUGBOUNTY",
+      "PENTESTING",
+      "PROXY"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Dirb",
+    "category": "Web Attack",
+    "description": "Classic content scanner that brute-forces web directories using wordlists.",
+    "url": "https://gitlab.com/kalilinux/packages/dirb",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/https:/@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dirb --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Dirb",
+          "command": "dirb target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Sub-Domain TakeOver",
+    "category": "Web Attack",
+    "description": "Detects subdomains vulnerable to takeover due to dangling DNS records pointing to unclaimed services.",
+    "url": "https://github.com/edoardottt/takeover",
+    "tier": "P1",
+    "github": {
+      "language": "Python",
+      "license": "MIT",
+      "stars": 92,
+      "forks": 23,
+      "topics": [
+        "subdomain-takeover",
+        "takeover-subdomain"
+      ]
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/edoardottt/takeover.git",
+        "cd takeover",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "sub-domain takeover --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Sub-Domain TakeOver",
+          "command": "sub-domain takeover target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack",
+      "SUBDOMAIN-TAKEOVER",
+      "TAKEOVER-SUBDOMAIN"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "CheckURL",
+    "category": "Web Attack",
+    "description": "Utility for checking URL status, redirects, and reachability during reconnaissance.",
+    "url": "https://github.com/UndeadSec/checkURL",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/UndeadSec/checkURL@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "checkurl --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with CheckURL",
+          "command": "checkurl target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Web Attack"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Setoolkit",
+    "category": "Phishing Awareness",
+    "description": "Widely-referenced social engineering framework used in security-awareness training to demonstrate phishing risk.",
+    "url": "https://github.com/trustedsec/social-engineer-toolkit",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/trustedsec/social-engineer-toolkit@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "setoolkit --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Setoolkit",
+          "command": "setoolkit target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Phishing Awareness"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "dnstwist",
+    "category": "Phishing Awareness",
+    "description": "Detects typosquatting and lookalike domains that could be used to impersonate a brand.",
+    "url": "https://github.com/elceef/dnstwist",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/elceef/dnstwist@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dnstwist --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with dnstwist",
+          "command": "dnstwist target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Phishing Awareness"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "QRLJacking",
+    "category": "Phishing Awareness",
+    "description": "Documents QR-code login hijacking attack patterns for awareness and defensive research.",
+    "url": "https://github.com/OWASP/QRLJacking",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/OWASP/QRLJacking@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "qrljacking --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with QRLJacking",
+          "command": "qrljacking target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Phishing Awareness"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Maskphish",
+    "category": "Phishing Awareness",
+    "description": "Demonstrates URL-masking techniques used in phishing awareness training.",
+    "url": "https://github.com/jaykali/maskphish",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/jaykali/maskphish@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "maskphish --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Maskphish",
+          "command": "maskphish target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Phishing Awareness"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "PEASS-ng (LinPEAS/WinPEAS)",
+    "category": "Post Exploitation",
+    "description": "Privilege-escalation enumeration scripts that scan a compromised host for common misconfigurations leading to elevated access.",
+    "url": "https://github.com/peass-ng/PEASS-ng",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/peass-ng/PEASS-ng@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "peass-ng (linpeas/winpeas) --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with PEASS-ng (LinPEAS/WinPEAS)",
+          "command": "peass-ng (linpeas/winpeas) target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Sliver",
+    "category": "Post Exploitation",
+    "description": "Open-source command-and-control framework used in adversary-simulation and red-team engagements.",
+    "url": "https://github.com/BishopFox/sliver",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/BishopFox/sliver@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "sliver --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Sliver",
+          "command": "sliver target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Havoc",
+    "category": "Post Exploitation",
+    "description": "Modern, modular command-and-control framework for red-team post-exploitation operations.",
+    "url": "https://github.com/HavocFramework/Havoc",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/HavocFramework/Havoc@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "havoc --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Havoc",
+          "command": "havoc target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "pwncat-cs",
+    "category": "Post Exploitation",
+    "description": "Post-exploitation platform that upgrades basic shells into fully-featured interactive sessions.",
+    "url": "https://github.com/calebstewart/pwncat",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/calebstewart/pwncat@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "pwncat-cs --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with pwncat-cs",
+          "command": "pwncat-cs target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Ligolo-ng",
+    "category": "Post Exploitation",
+    "description": "Tunneling tool for pivoting through compromised networks during authorized engagements.",
+    "url": "https://github.com/nicocha30/ligolo-ng",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/nicocha30/ligolo-ng@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "ligolo-ng --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Ligolo-ng",
+          "command": "ligolo-ng target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Chisel",
+    "category": "Post Exploitation",
+    "description": "Fast TCP/UDP tunnel over HTTP, commonly used for network pivoting during security assessments.",
+    "url": "https://github.com/jpillora/chisel",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/jpillora/chisel@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "chisel --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Chisel",
+          "command": "chisel target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Evil-WinRM",
+    "category": "Post Exploitation",
+    "description": "Windows Remote Management shell client used for authorized remote administration testing.",
+    "url": "https://github.com/Hackplayers/evil-winrm",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/Hackplayers/evil-winrm@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "evil-winrm --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Evil-WinRM",
+          "command": "evil-winrm target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Mythic",
+    "category": "Post Exploitation",
+    "description": "Collaborative, cross-platform red-team command-and-control framework with a plugin architecture.",
+    "url": "https://github.com/its-a-feature/Mythic",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/its-a-feature/Mythic@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "mythic --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Mythic",
+          "command": "mythic target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Post Exploitation"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Volatility 3",
+    "category": "Digital Forensics",
+    "description": "Advanced memory forensics framework for extracting artifacts from RAM captures during incident response.",
+    "url": "https://github.com/volatilityfoundation/volatility3",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/volatilityfoundation/volatility3@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "volatility 3 --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Volatility 3",
+          "command": "volatility 3 target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Digital Forensics"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Binwalk",
+    "category": "Digital Forensics",
+    "description": "Firmware analysis tool for identifying and extracting embedded files and executable code from binary images.",
+    "url": "https://github.com/ReFirmLabs/binwalk",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/ReFirmLabs/binwalk@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "binwalk --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Binwalk",
+          "command": "binwalk target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Digital Forensics"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Wireshark",
+    "category": "Digital Forensics",
+    "description": "The standard network protocol analyzer for capturing and inspecting traffic at the packet level.",
+    "url": "https://www.wireshark.org/",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/https:/@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "wireshark --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Wireshark",
+          "command": "wireshark target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Digital Forensics"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Bulk extractor",
+    "category": "Digital Forensics",
+    "description": "Scans disk images and files to extract forensic artifacts like emails, URLs, and credit card numbers.",
+    "url": "https://github.com/simsong/bulk_extractor",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/simsong/bulk_extractor@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "bulk extractor --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Bulk extractor",
+          "command": "bulk extractor target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Digital Forensics"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "pspy",
+    "category": "Digital Forensics",
+    "description": "Monitors Linux process activity without requiring root, useful for spotting suspicious scheduled tasks.",
+    "url": "https://github.com/DominicBreuker/pspy",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/DominicBreuker/pspy.git",
+        "cd pspy",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "pspy --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with pspy",
+          "command": "pspy target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Digital Forensics"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "RouterSploit",
+    "category": "Exploit Framework",
+    "description": "Exploitation framework focused specifically on embedded devices and routers.",
+    "url": "https://github.com/threat9/routersploit",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Rust compiler / Cargo"
+    ],
+    "installation": {
+      "method": "cargo",
+      "commands": [
+        "cargo install routersploit"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "routersploit --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with RouterSploit",
+          "command": "routersploit target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Exploit Framework"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Commix",
+    "category": "Exploit Framework",
+    "description": "Automated tool for detecting and exploiting command-injection vulnerabilities in web applications.",
+    "url": "https://github.com/commixproject/commix",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/commixproject/commix@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "commix --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Commix",
+          "command": "commix target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Exploit Framework"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "WebSploit",
+    "category": "Exploit Framework",
+    "description": "Modular framework combining several web and network exploitation modules under one interface.",
+    "url": "https://github.com/The404Hacking/websploit",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/The404Hacking/websploit@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "websploit --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with WebSploit",
+          "command": "websploit target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Exploit Framework"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Ghidra",
+    "category": "Reverse Engineering",
+    "description": "NSA-developed software reverse-engineering suite for disassembling and decompiling binaries.",
+    "url": "https://github.com/NationalSecurityAgency/ghidra",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/NationalSecurityAgency/ghidra@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "ghidra --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Ghidra",
+          "command": "ghidra target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Reverse Engineering"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Radare2",
+    "category": "Reverse Engineering",
+    "description": "Command-line reverse-engineering framework for binary analysis, disassembly, and debugging.",
+    "url": "https://github.com/radareorg/radare2",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/radareorg/radare2@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "radare2 --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Radare2",
+          "command": "radare2 target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Reverse Engineering"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Androguard",
+    "category": "Reverse Engineering",
+    "description": "Python framework for reverse-engineering and analyzing Android application packages.",
+    "url": "https://github.com/androguard/androguard",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/androguard/androguard@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "androguard --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Androguard",
+          "command": "androguard target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Reverse Engineering"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "JadX",
+    "category": "Reverse Engineering",
+    "description": "Decompiler that converts Android DEX bytecode back into readable Java source.",
+    "url": "https://github.com/skylot/jadx",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/skylot/jadx@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "jadx --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with JadX",
+          "command": "jadx target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Reverse Engineering"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Apk2Gold",
+    "category": "Reverse Engineering",
+    "description": "Utility for converting Android APK files into Java source for analysis.",
+    "url": "https://github.com/lxdvs/apk2gold",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/lxdvs/apk2gold@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "apk2gold --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Apk2Gold",
+          "command": "apk2gold target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Reverse Engineering"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "BloodHound",
+    "category": "Active Directory",
+    "description": "Graph-based analysis tool that reveals hidden attack paths and privilege-escalation chains inside Active Directory environments.",
+    "url": "https://github.com/BloodHoundAD/BloodHound",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/BloodHoundAD/BloodHound@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "bloodhound --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with BloodHound",
+          "command": "bloodhound target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Impacket",
+    "category": "Active Directory",
+    "description": "Python library implementing network protocols used across Windows and Active Directory security testing.",
+    "url": "https://github.com/fortra/impacket",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/fortra/impacket@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "impacket --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Impacket",
+          "command": "impacket target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "NetExec (nxc)",
+    "category": "Active Directory",
+    "description": "Network-service exploitation and enumeration swiss-army-knife for large Windows environments.",
+    "url": "https://github.com/Pennyw0rth/NetExec",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/Pennyw0rth/NetExec@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "netexec (nxc) --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with NetExec (nxc)",
+          "command": "netexec (nxc) target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Responder",
+    "category": "Active Directory",
+    "description": "LLMNR/NBT-NS/MDNS poisoner used to capture credentials during internal network assessments.",
+    "url": "https://github.com/lgandx/Responder",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/lgandx/Responder@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "responder --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Responder",
+          "command": "responder target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Certipy",
+    "category": "Active Directory",
+    "description": "Toolkit for enumerating and abusing misconfigurations in Active Directory Certificate Services.",
+    "url": "https://github.com/ly4k/Certipy",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Python 3.8+",
+      "pip"
+    ],
+    "installation": {
+      "method": "pip",
+      "commands": [
+        "git clone https://github.com/ly4k/Certipy.git",
+        "cd Certipy",
+        "pip install -r requirements.txt"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "certipy --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Certipy",
+          "command": "certipy target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Kerbrute",
+    "category": "Active Directory",
+    "description": "Fast tool for enumerating and brute-forcing Kerberos accounts in Active Directory.",
+    "url": "https://github.com/ropnop/kerbrute",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/ropnop/kerbrute@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "kerbrute --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Kerbrute",
+          "command": "kerbrute target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Active Directory"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Prowler",
+    "category": "Cloud Security",
+    "description": "Cloud security assessment tool that audits AWS, Azure, and GCP environments against compliance benchmarks.",
+    "url": "https://github.com/prowler-cloud/prowler",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/prowler-cloud/prowler@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "prowler --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Prowler",
+          "command": "prowler target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Cloud Security"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "ScoutSuite",
+    "category": "Cloud Security",
+    "description": "Multi-cloud security auditing tool that generates a visual report of misconfigurations across providers.",
+    "url": "https://github.com/nccgroup/ScoutSuite",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/nccgroup/ScoutSuite@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "scoutsuite --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with ScoutSuite",
+          "command": "scoutsuite target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Cloud Security"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Pacu",
+    "category": "Cloud Security",
+    "description": "AWS exploitation framework used to test the security posture of cloud environments.",
+    "url": "https://github.com/RhinoSecurityLabs/pacu",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/RhinoSecurityLabs/pacu@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "pacu --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Pacu",
+          "command": "pacu target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Cloud Security"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Trivy",
+    "category": "Cloud Security",
+    "description": "Comprehensive vulnerability scanner for container images, filesystems, and infrastructure-as-code.",
+    "url": "https://github.com/aquasecurity/trivy",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/aquasecurity/trivy@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "trivy --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Trivy",
+          "command": "trivy target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Cloud Security"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "MobSF",
+    "category": "Mobile Security",
+    "description": "Automated mobile application security testing framework for Android, iOS, and Windows apps.",
+    "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/MobSF/Mobile-Security-Framework-MobSF@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "mobsf --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with MobSF",
+          "command": "mobsf target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Mobile Security"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Frida",
+    "category": "Mobile Security",
+    "description": "Dynamic instrumentation toolkit for injecting scripts into running applications during mobile security testing.",
+    "url": "https://github.com/frida/frida",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/frida/frida@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "frida --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Frida",
+          "command": "frida target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Mobile Security"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "Objection",
+    "category": "Mobile Security",
+    "description": "Runtime mobile exploration toolkit built on Frida for assessing mobile app security without jailbreak.",
+    "url": "https://github.com/sensepost/objection",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/sensepost/objection@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "objection --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Objection",
+          "command": "objection target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Mobile Security"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "SlowLoris",
+    "category": "Network Stress Testing",
+    "description": "Documents a well-known low-bandwidth denial-of-service technique used in defensive capacity-planning research.",
+    "url": "https://github.com/gkbrk/slowloris",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/gkbrk/slowloris@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "slowloris --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with SlowLoris",
+          "command": "slowloris target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Network Stress Testing"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "StegoCracker",
+    "category": "Steganography",
+    "description": "Brute-force tool for cracking passwords on steganographically hidden data within images.",
+    "url": "https://github.com/W1LDN16H7/StegoCracker",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/W1LDN16H7/StegoCracker@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "stegocracker --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with StegoCracker",
+          "command": "stegocracker target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Steganography"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "Whitespace",
+    "category": "Steganography",
+    "description": "Hides and extracts data encoded within whitespace characters of text files.",
+    "url": "https://github.com/beardog108/snow10",
+    "tier": "P2",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/beardog108/snow10@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "whitespace --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Whitespace",
+          "command": "whitespace target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "Steganography"
+    ],
+    "difficulty": "Beginner",
+    "status": "Active"
+  },
+  {
+    "name": "DalFox",
+    "category": "XSS Testing",
+    "description": "Fast parameter analysis and XSS scanning tool built for automated pipelines.",
+    "url": "https://github.com/hahwul/dalfox",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/hahwul/dalfox@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "dalfox --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with DalFox",
+          "command": "dalfox target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "XSS Testing"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "XSStrike",
+    "category": "XSS Testing",
+    "description": "Advanced XSS detection suite with a fuzzing engine and context-aware payload generation for research purposes.",
+    "url": "https://github.com/UltimateHackers/XSStrike",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/UltimateHackers/XSStrike@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "xsstrike --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with XSStrike",
+          "command": "xsstrike target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "XSS Testing"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  },
+  {
+    "name": "Sherlock",
+    "category": "OSINT & Social",
+    "description": "Hunts down usernames across hundreds of social networks to map an individual's online presence.",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "tier": "P0",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/sherlock-project/sherlock@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "sherlock --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with Sherlock",
+          "command": "sherlock target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "OSINT & Social"
+    ],
+    "difficulty": "Intermediate",
+    "status": "Active"
+  },
+  {
+    "name": "SocialScan",
+    "category": "OSINT & Social",
+    "description": "Checks email address and username availability across social platforms without triggering notifications.",
+    "url": "https://github.com/iojw/socialscan",
+    "tier": "P1",
+    "github": {
+      "language": "Unknown",
+      "license": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "topics": []
+    },
+    "platform": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "installation": {
+      "method": "go",
+      "commands": [
+        "go install github.com/iojw/socialscan@latest"
+      ]
+    },
+    "usage": {
+      "basic": [
+        "socialscan --help"
+      ],
+      "examples": [
+        {
+          "title": "Run basic scan with SocialScan",
+          "command": "socialscan target.com"
+        }
+      ]
+    },
+    "documentation": {
+      "readme": true,
+      "wiki": false,
+      "homepage": null
+    },
+    "tags": [
+      "OSINT & Social"
+    ],
+    "difficulty": "Advanced",
+    "status": "Active"
+  }
+]
