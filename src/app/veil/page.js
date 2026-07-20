@@ -408,9 +408,14 @@ export default function VeilPage() {
                         {' — see '}
                         {res.refs.map((ref, idx) => (
                           <React.Fragment key={ref}>
-                            <Link href={`/catalog?search=${encodeURIComponent(ref)}`} className="underline hover:text-[var(--crimson-bright)]">
+                            <a 
+                              href={`/catalog?search=${encodeURIComponent(ref)}`} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="underline hover:text-[var(--crimson-bright)]"
+                            >
                               {ref}
-                            </Link>
+                            </a>
                             {idx < res.refs.length - 1 ? ' and ' : ''}
                           </React.Fragment>
                         ))}
