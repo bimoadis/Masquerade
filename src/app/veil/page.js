@@ -14,7 +14,7 @@ const placeholders = {
 
 const API_BASE = '/api';
 
-function findCatalogRefs(text) {
+function findCatalogRefs(text, mode) {
   const refs = [];
   const lowercase = (text || '').toLowerCase();
   
@@ -44,6 +44,21 @@ function findCatalogRefs(text) {
   }
   if (lowercase.includes('sql') || lowercase.includes('injection') || lowercase.includes('sqlmap')) {
     refs.push('Sqlmap');
+  }
+
+  if (refs.length === 0) {
+    if (mode === 'domain') {
+      return ['Amass', 'Subfinder', 'dnstwist'];
+    }
+    if (mode === 'brand') {
+      return ['theHarvester', 'SpiderFoot', 'dnstwist'];
+    }
+    if (mode === 'email') {
+      return ['Holehe', 'Infoga'];
+    }
+    if (mode === 'wallet') {
+      return ['SpiderFoot'];
+    }
   }
 
   return [...new Set(refs)].slice(0, 3);
@@ -281,7 +296,7 @@ export default function VeilPage() {
           severity: dark_web_hits.length > 0 || breaches.length > 0 ? 'HIGH' : 'LOW',
           body: summary || 'No exposure or risk detected in the latest dark web scan.',
           technique: mode === 'email' ? 'Credential Exposure Vector' : mode === 'brand' ? 'Brand Impersonation Sweeper' : 'Deep Web Reconnaissance',
-          refs: findCatalogRefs(summary)
+          refs: findCatalogRefs(summary, mode)
         });
 
         // Card 2: Specific breaches for email mode
