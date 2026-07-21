@@ -441,7 +441,7 @@ export default function VeilPage() {
 
       if (mode === 'domain') {
         endpoint = `${API_BASE}/deep/threat`;
-        body = { query: target.trim(), self_confirmed: true };
+        body = { query: target.trim() };
       } else if (mode === 'email') {
         endpoint = `${API_BASE}/deep/exposure`;
         body = { query: target.trim(), self_confirmed: true };
