@@ -24,8 +24,8 @@ function ScrollReveal({ children, className = '', delay = '' }) {
   }, []);
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={`${className} reveal ${delay} ${visible ? 'is-visible' : ''}`}
     >
       {children}
@@ -257,15 +257,15 @@ export default function Home() {
               <h3>VEIL SCANS<br />THE DEPTHS</h3>
               <div className="feature-img"><img src="/assets/01_veil_hero.png" alt="VEIL scanning" /></div>
               <p className="body-text">Domain, email, brand, or wallet — VEIL sweeps 30+ dark web
-              search layers, paste sites, and leak archives in a single pass.</p>
+                search layers, paste sites, and leak archives in a single pass.</p>
             </ScrollReveal>
 
             <ScrollReveal className="feature-card" delay="reveal-delay-1">
               <div className="eyebrow">#2 DECODE</div>
-              <h3>EVERY FINDING<br />UNMASKED</h3>
+              <h3 style={{ fontSize: "36px" }}>EVERY FINDING<br />UNMASKED</h3>
               <div className="feature-img"><img src="/assets/03_decode_eye.png" alt="Decode output" /></div>
               <p className="body-text">Raw scan results are cross-referenced against the Cipher
-              Catalog, surfacing the exact technique behind every match.</p>
+                Catalog, surfacing the exact technique behind every match.</p>
             </ScrollReveal>
 
             <ScrollReveal className="feature-card" delay="reveal-delay-2">
@@ -273,7 +273,7 @@ export default function Home() {
               <h3>THE GRIMOIRE<br />OF METHOD</h3>
               <div className="feature-img"><img src="/assets/02_catalog_codex.png" alt="Cipher Catalog" /></div>
               <p className="body-text">103 documented techniques across 17 disciplines —
-              searchable, filterable, and open for study inside the Cipher Catalog.</p>
+                searchable, filterable, and open for study inside the Cipher Catalog.</p>
             </ScrollReveal>
           </div>
         </div>
@@ -298,13 +298,13 @@ export default function Home() {
                   <p className="body-text">Enter a domain, email, brand, or wallet address into VEIL.</p>
                 </div>
               </ScrollReveal>
-              
+
               <ScrollReveal className="step-row" delay="reveal-delay-1">
                 <div className="step-num">02</div>
                 <div className="step-content">
                   <h3>THE SWEEP BEGINS</h3>
                   <p className="body-text">VEIL routes through Tor and sweeps 30+ dark web sources,
-                  leak archives, and live ransomware feeds.</p>
+                    leak archives, and live ransomware feeds.</p>
                 </div>
               </ScrollReveal>
 
@@ -313,7 +313,7 @@ export default function Home() {
                 <div className="step-content">
                   <h3>THE CIPHER DECODES</h3>
                   <p className="body-text">Findings are matched against the Catalog and returned as
-                  a readable intelligence report — no dark web experience required.</p>
+                    a readable intelligence report — no dark web experience required.</p>
                 </div>
               </ScrollReveal>
             </div>
