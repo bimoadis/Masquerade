@@ -348,7 +348,7 @@ export default function Home() {
           <div className="footer-grid">
             <div>
               <div className="footer-brand">
-                <img src="/assets/05_seal_emblem.png" alt="" />
+                <img src="/assets/logo-masquerade.png" alt="" />
                 MASQUERADE CIPHER
               </div>
               <p className="body-text" style={{ maxWidth: '340px', fontSize: '12px' }}>

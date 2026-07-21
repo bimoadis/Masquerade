@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <Link href="/" className="brand">
-        <img src="/assets/05_seal_emblem.png" alt="" />
+        <img src="/assets/logo-masquerade.png" alt="" />
         MASQUERADE CIPHER
       </Link>
       <nav>
