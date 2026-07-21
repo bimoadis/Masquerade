@@ -18,7 +18,7 @@ const API_BASE = '/api';
 function findCatalogRefs(text, mode) {
   const refs = [];
   const lowercase = (text || '').toLowerCase();
-  
+
   if (lowercase.includes('secret') || lowercase.includes('api key') || lowercase.includes('credential') || lowercase.includes('trufflehog')) {
     refs.push('TruffleHog');
   }
@@ -66,24 +66,74 @@ function findCatalogRefs(text, mode) {
 }
 
 function findMatchedToolsInHit(hit) {
-  const text = `${hit.title || ''} ${hit.content || ''} ${hit.bucket || ''}`.toLowerCase();
-  const matched = [];
+  const text = `${hit.title || ''} ${hit.bucket || ''} ${hit.content || ''}`.toLowerCase();
+  const titleLower = (hit.title || '').toLowerCase();
+  const bucketLower = (hit.bucket || '').toLowerCase();
+
+  const scoredTools = [];
+
   CIPHER_CATALOG.forEach(tool => {
+    let score = 0;
     const nameLower = tool.name.toLowerCase();
-    const regex = new RegExp(`\\b${nameLower}\\b`, 'i');
-    if (regex.test(text)) {
-      matched.push(tool.name);
-    } else if (text.includes(nameLower)) {
-      matched.push(tool.name);
+
+    // 1. Direct Name Match (+10 pts)
+    const nameRegex = new RegExp(`\\b${nameLower}\\b`, 'i');
+    if (nameRegex.test(text) || text.includes(nameLower)) {
+      score += 10;
+    }
+
+    // 2. Matcher Metadata Scoring
+    if (tool.matcher) {
+      // Keywords Match (+3 pts per match)
+      if (Array.isArray(tool.matcher.keywords)) {
+        tool.matcher.keywords.forEach(k => {
+          if (text.includes(k.toLowerCase())) {
+            score += 3;
+          }
+        });
+      }
+
+      // Buckets Match (+5 pts per match)
+      if (Array.isArray(tool.matcher.buckets)) {
+        tool.matcher.buckets.forEach(b => {
+          if (bucketLower.includes(b.toLowerCase())) {
+            score += 5;
+          }
+        });
+      }
+
+      // File Extensions Match (+5 pts per match)
+      if (Array.isArray(tool.matcher.extensions)) {
+        tool.matcher.extensions.forEach(ext => {
+          if (titleLower.includes(ext.toLowerCase())) {
+            score += 5;
+          }
+        });
+      }
+    }
+
+    if (score > 0) {
+      scoredTools.push({ name: tool.name, score });
     }
   });
-  return [...new Set(matched)];
+
+  // Sort tools by score descending and return top 3 highest scoring tools
+  scoredTools.sort((a, b) => b.score - a.score);
+  return scoredTools.slice(0, 3).map(t => t.name);
 }
 
 function DarkWebHitsCard({ res }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedContentHits, setExpandedContentHits] = useState({});
   const hits = res.hits || [];
   const displayHits = isExpanded ? hits : hits.slice(0, 5);
+
+  const toggleHitContent = (idx) => {
+    setExpandedContentHits(prev => ({
+      ...prev,
+      [idx]: !prev[idx]
+    }));
+  };
 
   const mapBucketToHackingTheme = (bucket) => {
     const lowercase = (bucket || '').toLowerCase();
@@ -102,60 +152,99 @@ function DarkWebHitsCard({ res }) {
     return 'ENVELOPE DECRYPTION PATHWAY';
   };
 
-  // Convert default title to dynamic target hack description
-  const formattedTitle = (res.title || '')
-    .replace('DARK WEB HITS', '[INFILTRATED NODES]')
-    .replace('RESULT(S)', 'TARGET EXPLOIT HITS');
+  // Convert default title to dynamic target hack description using hits length
+  const formattedTitle = `[INFILTRATED NODES] – ${hits.length} TARGET EXPLOIT HITS`;
 
   return (
-    <div className="result-card reveal is-visible">
-      <div className="result-header" style={{ borderBottom: '1px solid var(--cream-ghost)', paddingBottom: '12px', marginBottom: '16px', width: '100%' }}>
-        <div className="result-title text-[var(--cream)]">
-          {formattedTitle}
-        </div>
-      </div>
-      
-      <div className="flex flex-col gap-4">
+    <div className="w-full flex flex-col mt-8">
+      {/* Standalone Section Title */}
+      <h2 className="text-2xl font-bold tracking-wider text-[var(--cream)] pb-6 mb-10 font-display" style={{ fontFamily: 'var(--font-display)', fontSize: '26px', borderBottom: '1px solid var(--cream-ghost)', marginBottom: '24px' }}>
+        {formattedTitle}
+      </h2>
+
+      <div className="flex flex-col">
         {displayHits.map((hit, index) => {
           const matchedTools = findMatchedToolsInHit(hit);
           return (
-            <div key={index} className="p-4" style={{ border: '1px solid var(--cream-ghost)', background: 'rgba(26, 0, 0, 0.4)', borderRadius: '4px' }}>
-              <div className="flex items-center gap-3 mb-3 flex-wrap">
-                {hit.bucket && (
-                  <span className="px-2 py-0.5 text-[10px] font-mono border border-[var(--crimson-bright)]/60 text-[var(--cream)] rounded-sm bg-[var(--void-deeper)]/60">
+            <div key={index} className="result-card reveal is-visible">
+              <div className="result-header flex flex-col items-start gap-2">
+                <div className="result-title text-[var(--cream)] text-lg" style={{ fontSize: '20px' }}>
+                  FILE: {hit.title}
+                </div>
+                <div className="flex items-center gap-3 flex-wrap mt-1">
+                  <div className="result-severity text-[11px] border border-[var(--crimson-bright)]/60 text-[var(--cream)] rounded-sm bg-[var(--void-deeper)]/60 px-2 py-0.5">
                     {mapBucketToHackingTheme(hit.bucket)}
-                  </span>
+                  </div>
+                  {hit.date && (
+                    <span className="text-[11px] text-gray-400 font-mono">
+                      TIMESTAMP: {hit.date}
+                    </span>
+                  )}
+                  {hit.source_engine && (
+                    <span className="text-[11px] text-gray-400 font-mono uppercase">
+                      • ENGINE: {hit.source_engine}
+                    </span>
+                  )}
+                </div>
+                {hit.link && (
+                  <div className="font-mono text-[12px] text-gray-400 break-all mt-1">
+                    TARGET LINK &gt; <a href={hit.link} target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--crimson-bright)] text-[var(--cream)]">{hit.link}</a>
+                  </div>
                 )}
-                {hit.date && (
-                  <span className="text-[11px] text-gray-400 font-mono">
-                    TIMESTAMP: {hit.date}
-                  </span>
-                )}
               </div>
-              
-              <div className="font-mono text-sm font-bold text-white mb-2 break-all">
-                FILE: {hit.title}
-              </div>
-              
-              <div className="text-[11px] text-gray-300 font-mono leading-relaxed max-h-36 overflow-y-auto break-words whitespace-pre-wrap mb-3 p-2 bg-black/35 border border-white/5">
-                {hit.content || '[RAW DATASTREAM SHARDED / DIRECT DECRYPTION QUEUED]'}
-              </div>
+
+              {/* Payload Content Section with Toggle */}
+              {hit.content ? (
+                <div className="my-3">
+                  <button
+                    onClick={() => toggleHitContent(index)}
+                    className="px-3 py-1.5 text-[11px] font-mono font-bold text-[var(--crimson-bright)] border border-[var(--crimson-bright)]/60 bg-[var(--void-deeper)]/60 hover:!bg-[var(--crimson-bright)] hover:!text-[var(--cream)] rounded-sm transition-all duration-200 cursor-pointer uppercase flex items-center gap-2 tracking-wider"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <span>{expandedContentHits[index] ? '[-] COLLAPSE PAYLOAD CONTENT' : '[+] EXTRACT & VIEW DATASTREAM CONTENT'}</span>
+                  </button>
+
+                  {expandedContentHits[index] && (
+                    <div className="result-body font-mono text-[13px] text-[var(--cream-dim)] leading-[1.8] whitespace-pre-wrap break-all mt-3 p-4 border-l-2 border-[var(--crimson-bright)] bg-black/40 rounded-r-sm">
+                      {hit.content}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="result-body font-mono text-[13px] text-[var(--cream-dim)] leading-[1.8] whitespace-pre-wrap break-all mb-4 opacity-70">
+                  [RAW DATASTREAM SHARDED / DIRECT DECRYPTION QUEUED]
+                </div>
+              )}
+
+              {/* Skill Audit Narrative Logs */}
+              {matchedTools.length > 0 && (
+                <div className="flex flex-col gap-1 text-[12px] font-mono text-[var(--crimson-bright)]/90 uppercase pl-3 border-l-2 border-[var(--crimson-bright)] mb-4 mt-2">
+                  {matchedTools.map(tool => (
+                    <div key={tool}>
+                      &gt;&gt;&gt; [CIPHER MODULE ENGAGED: EXECUTED {tool.toUpperCase()} PAYLOAD]
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Skill Matching Highlight */}
               {matchedTools.length > 0 && (
-                <div className="mt-2 pt-2 border-t border-white/5 flex items-center gap-2 flex-wrap">
-                  <span className="text-[10px] text-gray-500 font-mono uppercase tracking-wider">[INFILTRATION SKILLS ENGAGED]:</span>
-                  {matchedTools.map(tool => (
-                    <a
-                      key={tool}
-                      href={`/catalog?search=${encodeURIComponent(tool)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#B01010] hover:bg-[#D02020] text-[#F2E8D5] border border-red-500 rounded-sm transition-all duration-200 shadow-[0_0_8px_rgba(176,16,16,0.6)] cursor-pointer flex items-center gap-1"
-                    >
-                      🛡️ {tool}
-                    </a>
-                  ))}
+                <div className="result-technique mt-6">
+                  <div className="label">[INFILTRATION SKILLS ENGAGED]</div>
+                  <div className="flex items-center gap-3 flex-wrap mt-3 mb-1">
+                    {matchedTools.map(tool => (
+                      <a
+                        key={tool}
+                        href={`/catalog?search=${encodeURIComponent(tool)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="result-severity hover:!bg-[var(--crimson-bright)] hover:!text-[var(--cream)] transition-all duration-200 cursor-pointer no-underline"
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {tool}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -164,17 +253,17 @@ function DarkWebHitsCard({ res }) {
       </div>
 
       {hits.length > 5 && (
-        <div className="mt-4 text-center">
-          <button 
+        <div className="mt-4 mb-6 text-center">
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-xs font-mono underline hover:text-[var(--crimson-bright)] cursor-pointer text-gray-400"
+            className="text-[13px] font-mono uppercase tracking-wider font-bold underline hover:text-[var(--cream)] cursor-pointer text-[var(--crimson-bright)] transition-colors duration-200"
           >
             {isExpanded ? 'Collapse Extracted Hits' : `Show all ${hits.length} extracted hits`}
           </button>
         </div>
       )}
 
-      <div className="mt-6 pt-4 flex justify-between items-center text-[10px] font-mono text-gray-500" style={{ borderTop: '1px solid var(--cream-ghost)' }}>
+      <div className="pt-4 flex justify-between items-center text-[13px] font-mono text-[var(--cream-dim)] opacity-80 mb-8" style={{ borderTop: '1px dashed var(--cream-ghost)' }}>
         <span>[{hits.length} COMPROMISED DATASETS EXTRACTED]</span>
         <span>ROUTING VECTOR: Intelligence X</span>
       </div>
@@ -184,7 +273,7 @@ function DarkWebHitsCard({ res }) {
 
 function generateMockResults(target, mode) {
   const normalizedTarget = target || 'target';
-  
+
   if (mode === 'wallet') {
     return [
       {
@@ -271,32 +360,6 @@ function generateMockResults(target, mode) {
       body: `**[DECRYPTION SUCCESSFUL]**\n\nA credential dump referencing \`${normalizedTarget}\` was located across **2 dark web paste-site indices**. The exposure includes hashed credential fragments consistent with a third-party database breach, rather than direct target host compromise. Extracted secrets audited via **TruffleHog** and **Gitleaks**.`,
       technique: 'Source Code Reconnaissance & Credential Exposure',
       refs: ['TruffleHog', 'Gitleaks']
-    },
-    {
-      type: 'dark_web_hits',
-      title: 'DARK WEB HITS – 3 RESULT(S)',
-      hits: [
-        {
-          title: `${normalizedTarget}_database_leak_v2.sql`,
-          date: '2025-11-12',
-          bucket: 'Darknet » Tor',
-          source_engine: 'intelx',
-          content: 'Target metadata match found: credentials database. Admin credentials compromised. MD5 hashes decrypted successfully using Hashcat.'
-        },
-        {
-          title: `https://www.ransomlook.io/group/lockbit3`,
-          date: '2025-08-01',
-          bucket: 'Web » Public » Technology',
-          content: 'Lockbit3 ransomware gang leak index referencing target domain in private negotiation logs.'
-        },
-        {
-          title: `StealerLogs_${normalizedTarget}_compiled.rar`,
-          date: '2026-02-14',
-          bucket: 'Leaks » Logs',
-          source_engine: 'intelx',
-          content: 'Password stealer log payload captured from target browser session. Saved session cookies and tokens present. Verified registry keys using Gitleaks audits.'
-        }
-      ]
     },
     {
       title: 'TYPOSQUAT DOMAINS',
@@ -436,8 +499,8 @@ export default function VeilPage() {
         formattedResults.push({
           title: 'COUNTERPARTY RISK ANALYSIS',
           severity: linked_flagged_wallets.length > 0 ? 'HIGH' : 'LOW',
-          body: linked_flagged_wallets.length > 0 
-            ? `**[THREAT LINK DETECTED]**\n\nDetected **${linked_flagged_wallets.length}** flagged transaction counterparties tied to known security exploits or ransomware addresses.\n\n${linked_flagged_wallets.slice(0, 5).map(w => `- \`${w}\``).join('\n')}` 
+          body: linked_flagged_wallets.length > 0
+            ? `**[THREAT LINK DETECTED]**\n\nDetected **${linked_flagged_wallets.length}** flagged transaction counterparties tied to known security exploits or ransomware addresses.\n\n${linked_flagged_wallets.slice(0, 5).map(w => `- \`${w}\``).join('\n')}`
             : '**[HEALTHY INTERACTION HISTORY]**\n\nNo transaction history with flagged addresses.',
           technique: 'Flagged Address Association',
           refs: ['SpiderFoot']
@@ -559,8 +622,8 @@ export default function VeilPage() {
               disabled={isScanning}
               style={hasError ? { borderColor: 'var(--crimson-bright)' } : {}}
             />
-            <button 
-              className="btn btn-solid" 
+            <button
+              className="btn btn-solid"
               id="veil-scan-btn"
               onClick={handleScan}
               disabled={isScanning}
@@ -604,28 +667,25 @@ export default function VeilPage() {
                       {res.body}
                     </ReactMarkdown>
                   </div>
-                  <div className="result-technique">
+                  <div className="result-technique mt-6">
                     <div className="label">MATCHED TECHNIQUE</div>
-                    <div className="font-sans text-xs">
-                      <span className="font-mono">{res.technique}</span>
+                    <div className="font-mono text-[13px] leading-relaxed">
+                      <span className="text-[var(--cream)] font-bold">{res.technique}</span>
                       {res.refs && res.refs.length > 0 && (
-                        <>
-                          {' — see '}
-                          {res.refs.map((ref, idx) => (
-                            <React.Fragment key={ref}>
-                              <a 
-                                href={`/catalog?search=${encodeURIComponent(ref)}`} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="underline hover:text-[var(--crimson-bright)]"
-                              >
-                                {ref}
-                              </a>
-                              {idx < res.refs.length - 1 ? ' and ' : ''}
-                            </React.Fragment>
+                        <div className="flex items-center gap-3 flex-wrap mt-3 mb-1">
+                          {res.refs.map((ref) => (
+                            <a
+                              key={ref}
+                              href={`/catalog?search=${encodeURIComponent(ref)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="result-severity hover:!bg-[var(--crimson-bright)] hover:!text-[var(--cream)] transition-all duration-200 cursor-pointer no-underline"
+                              style={{ textDecoration: 'none' }}
+                            >
+                              {ref}
+                            </a>
                           ))}
-                          {' in the Cipher Catalog.'}
-                        </>
+                        </div>
                       )}
                     </div>
                   </div>
