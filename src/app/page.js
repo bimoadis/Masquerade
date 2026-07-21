@@ -366,7 +366,7 @@ export default function Home() {
             <div>
               <div className="footer-col-title">CONNECT</div>
               <div className="footer-links">
-                <a href="#">X / Twitter</a>
+                <a href="https://x.com/masqcipher" target="_blank" rel="noopener noreferrer">X / Twitter</a>
                 <a href="#">Telegram</a>
               </div>
             </div>
