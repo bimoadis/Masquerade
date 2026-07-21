@@ -72,21 +72,21 @@ function generateMockResults(target, mode) {
       {
         title: 'ON-CHAIN ADDRESS ASSOCIATION',
         severity: 'HIGH',
-        body: `**Address**: \`${normalizedTarget}\`\n\nIdentified association with **3 historical dark-web forum posts** referencing OTC capital-drain operations. Blockchain heuristics suggest trace outputs linked to a known security breach exploit dump in Q3 2025.`,
-        technique: 'On-chain Wallet Association & Dark Web Mentions',
-        refs: ['Sherlock', 'TruffleHog']
+        body: `**[INFILTRATION STATUS: COMPLETE]**\n\nTarget Wallet: \`${normalizedTarget}\`\n\nBy running transaction routing footprints, we intercepted **3 historical dark-web forum posts** referencing OTC capital-drain operations. Ledger heuristics link this address to a known security exploit dump in Q3 2025.`,
+        technique: 'On-chain Wallet Association & Dark Web Mentions (SpiderFoot / Sherlock)',
+        refs: ['Sherlock', 'SpiderFoot']
       },
       {
         title: 'TOKEN CONTRACT CLONES',
         severity: 'MEDIUM',
-        body: `Detected **2 malicious proxy contract clones** deployed on EVM-compatible chains mimicking the wallet deployer pattern. This indicates potential preparations for a community front-running or phishing scam.`,
-        technique: 'Impersonation & Smart Contract Clones',
+        body: `**[LOOKALIKES DETECTED]**\n\nIdentified **2 malicious proxy contract clones** deployed on EVM-compatible chains mimicking the wallet deployer pattern. This indicates active preparation for community front-running or phishing.`,
+        technique: 'Impersonation & Smart Contract Clones (dnstwist)',
         refs: ['dnstwist']
       },
       {
         title: 'RANSOMWARE FEED SEARCH',
         severity: 'LOW',
-        body: `Zero matches found for target wallet address \`${normalizedTarget}\` across currently monitored ransomware gang leak sites.`,
+        body: `**[INDEX READ: CLEAN]**\n\nZero matches found for target wallet address \`${normalizedTarget}\` across currently monitored ransomware gang leak sites. No active threat markers detected.`,
         technique: 'Status: Clean index read.',
         refs: []
       }
@@ -98,21 +98,21 @@ function generateMockResults(target, mode) {
       {
         title: 'COMB DUMP FRAGMENT EXPOSURE',
         severity: 'HIGH',
-        body: `Email target \`${normalizedTarget}\` was found in **2 distinct plain-text leak aggregates** compiled in 2025/2026. The fragment includes a cryptographically salted MD5 hash signature and plain-text hints matching legacy credentials.`,
-        technique: 'Credential Exposure & Leak Audits',
-        refs: ['TruffleHog', 'Gitleaks']
+        body: `**[DECRYPTION SUCCESSFUL]**\n\nEmail target \`${normalizedTarget}\` was found in **2 distinct plain-text leak aggregates** compiled in 2025/2026. The fragment includes a cryptographically salted MD5 hash signature and plain-text hints matching legacy credentials. Extracted secrets match structures verified by **TruffleHog** and **Gitleaks**.`,
+        technique: 'Credential Exposure & Leak Audits (Gitleaks / TruffleHog / Hashcat)',
+        refs: ['TruffleHog', 'Gitleaks', 'Hashcat']
       },
       {
         title: 'REGISTERED PLATFORMS SCAN',
         severity: 'MEDIUM',
-        body: `Target registration verified on **4 high-risk service portals** known to have suffered database compromises in the last 18 months. Password reuse vectors are active.`,
+        body: `**[ENDPOINT SCAN COMPLETE]**\n\nTarget registration verified on **4 high-risk service portals** known to have suffered database compromises. Tested registration endpoints using **Holehe** authentication probes. Password reuse vectors are highly active.`,
         technique: 'Holehe Platform Registration Enumeration',
         refs: ['Holehe']
       },
       {
         title: 'SPAM LIST CORRELATION',
         severity: 'LOW',
-        body: `Email listed on global marketing/spam campaign distributions, indicating exposure of public contact lists but no active malware delivery profile.`,
+        body: `**[METADATA PARSED]**\n\nEmail listed on global marketing/spam campaign distributions, indicating exposure of public contact lists but no active malware delivery profile.`,
         technique: 'Status: Low exposure, secure password recommended.',
         refs: []
       }
@@ -124,21 +124,21 @@ function generateMockResults(target, mode) {
       {
         title: 'TYPOSQUAT BRAND IMITATORS',
         severity: 'HIGH',
-        body: `Found **5 registered lookalike domains** targeting \`${normalizedTarget}\`. Heuristics show active MX records configured on 2 of them, representing a high risk of active phishing or email masquerading.`,
-        technique: 'Typosquatting & Brand Impersonation',
+        body: `**[BRAND SCAN: ALERTS TRIGGERED]**\n\nFound **5 registered lookalike domains** targeting \`${normalizedTarget}\`. Probing via **dnstwist** shows active MX records configured on 2 of them, representing a high risk of active phishing or email masquerading.`,
+        technique: 'Typosquatting & Brand Impersonation (dnstwist)',
         refs: ['dnstwist']
       },
       {
         title: 'INTELLECTUAL PROPERTY CHATTER',
         severity: 'MEDIUM',
-        body: `Mentions of codebases matching \`${normalizedTarget}\` were flagged in private Git repository leaks. Mentions include proprietary development API signatures.`,
+        body: `**[REPOSITORY SCAN SUCCESSFUL]**\n\nMentions of codebases matching \`${normalizedTarget}\` were flagged in private Git repository leaks. Checked utilizing **Gitleaks** and **TruffleHog**. Mentions include proprietary development API signatures.`,
         technique: 'Source Code Leak Reconnaissance',
         refs: ['Gitleaks', 'TruffleHog']
       },
       {
         title: 'RANSOMWARE WATCHLIST',
         severity: 'LOW',
-        body: `No operational ransomware groups list \`${normalizedTarget}\` or associated entities on active countdown logs.`,
+        body: `**[INDEX READ: CLEAN]**\n\nNo operational ransomware groups list \`${normalizedTarget}\` or associated entities on active countdown logs.`,
         technique: 'Status: Safe',
         refs: []
       }
@@ -150,21 +150,21 @@ function generateMockResults(target, mode) {
     {
       title: 'CREDENTIAL EXPOSURE',
       severity: 'HIGH',
-      body: `A credential dump referencing \`${normalizedTarget}\` was located across **2 dark web paste-site indices**. The exposure includes hashed credential fragments consistent with a third-party database breach, rather than direct target host compromise.`,
+      body: `**[DECRYPTION SUCCESSFUL]**\n\nA credential dump referencing \`${normalizedTarget}\` was located across **2 dark web paste-site indices**. The exposure includes hashed credential fragments consistent with a third-party database breach, rather than direct target host compromise. Extracted secrets audited via **TruffleHog** and **Gitleaks**.`,
       technique: 'Source Code Reconnaissance & Credential Exposure',
       refs: ['TruffleHog', 'Gitleaks']
     },
     {
       title: 'TYPOSQUAT DOMAINS',
       severity: 'MEDIUM',
-      body: `**4 lookalike domains** were identified that closely mimic \`${normalizedTarget}\` — a common precursor to phishing campaigns targeting a project's community.`,
+      body: `**[LOOKALIKES DETECTED]**\n\n**4 lookalike domains** were identified that closely mimic \`${normalizedTarget}\` — a common precursor to phishing campaigns targeting a project's community. Mapped via **dnstwist**.`,
       technique: 'Typosquat & Lookalike Domain Monitoring',
       refs: ['dnstwist']
     },
     {
       title: 'RANSOMWARE CHATTER',
       severity: 'LOW',
-      body: `No direct mentions of \`${normalizedTarget}\` were found across currently tracked ransomware group leak sites. This is a clean read at time of scan.`,
+      body: `**[INDEX READ: CLEAN]**\n\nNo direct mentions of \`${normalizedTarget}\` were found across currently tracked ransomware group leak sites. This is a clean read at time of scan.`,
       technique: 'Status: No further action indicated.',
       refs: []
     }
@@ -192,15 +192,40 @@ export default function VeilPage() {
     setLogs([]);
     setResults([]);
 
-    const steps = [
-      'initializing tor circuit...',
-      `resolving target: ${target}`,
-      'sweeping 30+ dark web search indices...',
-      'cross-referencing leak-dump archives...',
-      'checking live ransomware leak feeds...',
-      'matching findings against cipher catalog...',
-      'scan complete.'
-    ];
+    const stepsByMode = {
+      domain: [
+        `[STEALTH] Routing stealth proxy nodes for target: ${target}`,
+        `[RECON] Running Amass to map DNS records & subdomains for: ${target}`,
+        `[RECON] Mapping active lookalike domains matching: ${target} [dnstwist active]`,
+        `[EXPLOIT] Auditing repositories & pastebins for ${target} leaks [Gitleaks]`,
+        `[OSINT] Sweeping 30+ dark web databases for references to ${target}`,
+        `[DECRYPTION] Extracting & decrypting credential hashes for ${target} [Hashcat]`,
+        `[SUCCESS] Infiltration of ${target} database complete. Compiling intelligence report.`
+      ],
+      email: [
+        `[STEALTH] Initializing Tor circuit to audit: ${target}`,
+        `[RECON] Running Sherlock & Maigret footprint search for: ${target}`,
+        `[EXPLOIT] Probing registration endpoints on ${target} via Holehe`,
+        `[OSINT] Searching aggregated database paste bins & COMB leaks for: ${target}`,
+        `[SUCCESS] Leak fragment footprint extraction for ${target} complete.`
+      ],
+      brand: [
+        `[STEALTH] Directing brand crawler nodes targeting: ${target}`,
+        `[RECON] Fetching brand identifiers for "${target}" via theHarvester & SpiderFoot`,
+        `[EXPLOIT] Auditing public code repositories for: "${target}" leaks [Gitleaks]`,
+        `[RECON] Scanning domain records with dnstwist for clones mimicking: ${target}`,
+        `[SUCCESS] Brand risk intelligence profile for ${target} compiled.`
+      ],
+      wallet: [
+        `[STEALTH] Tuning RPC connection to audit ledger history for: ${target}`,
+        `[RECON] Tracing transaction graph for address: ${target}...`,
+        `[RECON] Tracking counterparty wallet history for: ${target} [SpiderFoot]`,
+        `[OSINT] Auditing ransomware ledger lists referencing: ${target}`,
+        `[SUCCESS] Ledger analysis for wallet ${target} compiled.`
+      ]
+    };
+
+    const steps = stepsByMode[mode] || stepsByMode.domain;
 
     // Trigger API call early in background so it executes during/after animations
     const apiCallPromise = (async () => {
@@ -258,7 +283,7 @@ export default function VeilPage() {
         formattedResults.push({
           title: 'WALLET DOSSIER VERDICT',
           severity: verdict === 'FLAGGED' || score >= 60 ? 'HIGH' : verdict === 'WATCH' || score >= 30 ? 'MEDIUM' : 'LOW',
-          body: `**Status**: ${verdict}\n**Threat Score**: ${score}/100\n\n${wallet_verdict?.summary || 'No detailed analysis summary returned.'}\n\n### Metrics:\n- **Transactions Scanned**: ${transaction_count}\n- **Wallet Classification**: ${wallet_verdict?.classification?.toUpperCase() || 'UNKNOWN'}`,
+          body: `**[LEDGER ANALYSIS RUNNING: SpiderFoot]**\n\n**Status**: ${verdict}\n**Threat Score**: ${score}/100\n\n${wallet_verdict?.summary || 'No detailed analysis summary returned.'}\n\n### Metrics:\n- **Transactions Scanned**: ${transaction_count}\n- **Wallet Classification**: ${wallet_verdict?.classification?.toUpperCase() || 'UNKNOWN'}`,
           technique: 'On-chain Wallet Heuristics',
           refs: ['SpiderFoot']
         });
@@ -268,8 +293,8 @@ export default function VeilPage() {
           title: 'COUNTERPARTY RISK ANALYSIS',
           severity: linked_flagged_wallets.length > 0 ? 'HIGH' : 'LOW',
           body: linked_flagged_wallets.length > 0 
-            ? `Detected **${linked_flagged_wallets.length}** flagged transaction counterparties tied to known security exploits or ransomware addresses.\n\n${linked_flagged_wallets.slice(0, 5).map(w => `- \`${w}\``).join('\n')}` 
-            : 'No transaction history with flagged addresses.',
+            ? `**[THREAT LINK DETECTED]**\n\nDetected **${linked_flagged_wallets.length}** flagged transaction counterparties tied to known security exploits or ransomware addresses.\n\n${linked_flagged_wallets.slice(0, 5).map(w => `- \`${w}\``).join('\n')}` 
+            : '**[HEALTHY INTERACTION HISTORY]**\n\nNo transaction history with flagged addresses.',
           technique: 'Flagged Address Association',
           refs: ['SpiderFoot']
         });
@@ -279,7 +304,7 @@ export default function VeilPage() {
           formattedResults.push({
             title: 'LAUNCHER RISK PROFILE',
             severity: deployer_rug_rate > 0.5 ? 'HIGH' : deployer_rug_rate > 0.2 ? 'MEDIUM' : 'LOW',
-            body: `Total launches: **${deployer_launches}**\nRug pulls: **${deployer_rug_count}**\nRug pull rate: **${(deployer_rug_rate * 100).toFixed(0)}%**\n\nPattern analysis indicates ${deployer_rug_rate > 0.5 ? 'extreme launch hazard.' : deployer_rug_rate > 0.2 ? 'elevated risk.' : 'clean token deploy history.'}`,
+            body: `**[LAUNCH HISTORY EXTRACTED]**\n\nTotal launches: **${deployer_launches}**\nRug pulls: **${deployer_rug_count}**\nRug pull rate: **${(deployer_rug_rate * 100).toFixed(0)}%**\n\nPattern analysis indicates ${deployer_rug_rate > 0.5 ? 'extreme launch hazard.' : deployer_rug_rate > 0.2 ? 'elevated risk.' : 'clean token deploy history.'}`,
             technique: 'Token Deployment Intelligence',
             refs: ['TruffleHog']
           });
@@ -291,10 +316,19 @@ export default function VeilPage() {
         const breaches = data.breaches || [];
 
         // Card 1: AI Threat summary
+        let prefix = '';
+        if (mode === 'email') {
+          prefix = `**[INFILTRATION SUCCESSFUL]** Probed social registration vectors using **Holehe**. Found database leak signatures corresponding to the email target.\n\n`;
+        } else if (mode === 'brand') {
+          prefix = `**[RECONNAISSANCE COMPLETE]** Gathered public threat indicators using **theHarvester** and **SpiderFoot**. Checked lookalikes with **dnstwist**.\n\n`;
+        } else {
+          prefix = `**[TARGET INFILTRATED]** Scanned attack surface using **Amass** and matched leak patterns against **TruffleHog** indices.\n\n`;
+        }
+
         formattedResults.push({
           title: mode === 'email' ? 'PERSONAL IDENTITY EXPOSURE' : mode === 'brand' ? 'BRAND RISK ANALYSIS' : 'THREAT INTELLIGENCE REPORT',
           severity: dark_web_hits.length > 0 || breaches.length > 0 ? 'HIGH' : 'LOW',
-          body: summary || 'No exposure or risk detected in the latest dark web scan.',
+          body: prefix + (summary || 'No exposure or risk detected in the latest dark web scan.'),
           technique: mode === 'email' ? 'Credential Exposure Vector' : mode === 'brand' ? 'Brand Impersonation Sweeper' : 'Deep Web Reconnaissance',
           refs: findCatalogRefs(summary, mode)
         });
@@ -304,7 +338,7 @@ export default function VeilPage() {
           formattedResults.push({
             title: 'BREACH ARCHIVE DETECTED',
             severity: 'MEDIUM',
-            body: `Target found in **${breaches.length}** public credential leak(s):\n\n` + breaches.map(b => `- **${b.name}** (${b.date || 'Unknown Date'}): ${b.description || 'No description'}`).join('\n'),
+            body: `**[BREACH RECORD EXTRACTED]**\n\nTarget found in **${breaches.length}** public credential leak(s):\n\n` + breaches.map(b => `- **${b.name}** (${b.date || 'Unknown Date'}): ${b.description || 'No description'}`).join('\n'),
             technique: 'Credential Exposure & Leak Audits',
             refs: ['Holehe', 'Gitleaks']
           });
