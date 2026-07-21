@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { CIPHER_CATALOG } from '@/data/catalogData';
 
 const placeholders = {
   domain: 'e.g. yourproject.xyz',
@@ -62,6 +63,101 @@ function findCatalogRefs(text, mode) {
   }
 
   return [...new Set(refs)].slice(0, 3);
+}
+
+function findMatchedToolsInHit(hit) {
+  const text = `${hit.title || ''} ${hit.content || ''} ${hit.bucket || ''}`.toLowerCase();
+  const matched = [];
+  CIPHER_CATALOG.forEach(tool => {
+    const nameLower = tool.name.toLowerCase();
+    const regex = new RegExp(`\\b${nameLower}\\b`, 'i');
+    if (regex.test(text)) {
+      matched.push(tool.name);
+    } else if (text.includes(nameLower)) {
+      matched.push(tool.name);
+    }
+  });
+  return [...new Set(matched)];
+}
+
+function DarkWebHitsCard({ res }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const hits = res.hits || [];
+  const displayHits = isExpanded ? hits : hits.slice(0, 5);
+
+  return (
+    <div className="result-card reveal is-visible" style={{ border: '1px solid var(--cream-ghost)' }}>
+      <div className="result-header" style={{ borderBottom: '1px solid var(--cream-ghost)', paddingBottom: '12px', marginBottom: '16px' }}>
+        <div className="result-title text-emerald-400 font-mono" style={{ letterSpacing: '0.05em' }}>
+          {res.title}
+        </div>
+      </div>
+      
+      <div className="flex flex-col gap-4">
+        {displayHits.map((hit, index) => {
+          const matchedTools = findMatchedToolsInHit(hit);
+          return (
+            <div key={index} className="p-4" style={{ border: '1px solid var(--cream-ghost)', background: 'rgba(0, 0, 0, 0.25)', borderRadius: '4px' }}>
+              <div className="flex items-center gap-3 mb-3 flex-wrap">
+                {hit.bucket && (
+                  <span className="px-2 py-0.5 text-[10px] font-mono border border-emerald-500/50 text-emerald-400 rounded-sm bg-emerald-950/20">
+                    {hit.bucket}
+                  </span>
+                )}
+                {hit.date && (
+                  <span className="text-[11px] text-gray-400 font-mono">
+                    {hit.date}
+                  </span>
+                )}
+              </div>
+              
+              <div className="font-mono text-sm font-bold text-white mb-2 break-all">
+                {hit.title}
+              </div>
+              
+              <div className="text-[11px] text-gray-300 font-mono leading-relaxed max-h-36 overflow-y-auto break-words whitespace-pre-wrap mb-3 p-2 bg-black/30 border border-white/5">
+                {hit.content || 'Content not available'}
+              </div>
+
+              {/* Skill Matching Highlight */}
+              {matchedTools.length > 0 && (
+                <div className="mt-2 pt-2 border-t border-white/5 flex items-center gap-2 flex-wrap">
+                  <span className="text-[10px] text-gray-500 font-sans uppercase tracking-wider">Matched Cipher Skills:</span>
+                  {matchedTools.map(tool => (
+                    <a
+                      key={tool}
+                      href={`/catalog?search=${encodeURIComponent(tool)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#8B0000] hover:bg-[#B01010] text-[#F2E8D5] border border-red-900 rounded-sm transition-colors cursor-pointer flex items-center gap-1"
+                    >
+                      🛡️ {tool}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {hits.length > 5 && (
+        <div className="mt-4 text-center">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-xs font-mono underline hover:text-[var(--crimson-bright)] cursor-pointer text-gray-400"
+          >
+            {isExpanded ? 'Show less' : `Show all ${hits.length} results`}
+          </button>
+        </div>
+      )}
+
+      <div className="mt-6 pt-4 flex justify-between items-center text-[10px] font-mono text-gray-500" style={{ borderTop: '1px solid var(--cream-ghost)' }}>
+        <span>{hits.length} source(s) found</span>
+        <span>via Intelligence X</span>
+      </div>
+    </div>
+  );
 }
 
 function generateMockResults(target, mode) {
@@ -153,6 +249,32 @@ function generateMockResults(target, mode) {
       body: `**[DECRYPTION SUCCESSFUL]**\n\nA credential dump referencing \`${normalizedTarget}\` was located across **2 dark web paste-site indices**. The exposure includes hashed credential fragments consistent with a third-party database breach, rather than direct target host compromise. Extracted secrets audited via **TruffleHog** and **Gitleaks**.`,
       technique: 'Source Code Reconnaissance & Credential Exposure',
       refs: ['TruffleHog', 'Gitleaks']
+    },
+    {
+      type: 'dark_web_hits',
+      title: 'DARK WEB HITS – 3 RESULT(S)',
+      hits: [
+        {
+          title: `${normalizedTarget}_database_leak_v2.sql`,
+          date: '2025-11-12',
+          bucket: 'Darknet » Tor',
+          source_engine: 'intelx',
+          content: 'Target metadata match found: credentials database. Admin credentials compromised. MD5 hashes decrypted successfully using Hashcat.'
+        },
+        {
+          title: `https://www.ransomlook.io/group/lockbit3`,
+          date: '2025-08-01',
+          bucket: 'Web » Public » Technology',
+          content: 'Lockbit3 ransomware gang leak index referencing target domain in private negotiation logs.'
+        },
+        {
+          title: `StealerLogs_${normalizedTarget}_compiled.rar`,
+          date: '2026-02-14',
+          bucket: 'Leaks » Logs',
+          source_engine: 'intelx',
+          content: 'Password stealer log payload captured from target browser session. Saved session cookies and tokens present. Verified registry keys using Gitleaks audits.'
+        }
+      ]
     },
     {
       title: 'TYPOSQUAT DOMAINS',
@@ -343,6 +465,14 @@ export default function VeilPage() {
             refs: ['Holehe', 'Gitleaks']
           });
         }
+
+        if (dark_web_hits && dark_web_hits.length > 0) {
+          formattedResults.push({
+            type: 'dark_web_hits',
+            title: `DARK WEB HITS – ${dark_web_hits.length} RESULT(S)`,
+            hits: dark_web_hits
+          });
+        }
       }
 
       setResults(formattedResults);
@@ -437,44 +567,49 @@ export default function VeilPage() {
 
           {/* Results Output */}
           <div className={`veil-results ${scanState === 'done' ? 'show' : ''}`} id="veil-results">
-            {results.map((res, i) => (
-              <div key={i} className="result-card reveal is-visible">
-                <div className="result-header">
-                  <div className="result-title">{res.title}</div>
-                  <div className="result-severity">{res.severity}</div>
-                </div>
-                <div className="result-body font-mono uppercase text-xs">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {res.body}
-                  </ReactMarkdown>
-                </div>
-                <div className="result-technique">
-                  <div className="label">MATCHED TECHNIQUE</div>
-                  <div className="font-sans text-xs">
-                    <span className="font-mono">{res.technique}</span>
-                    {res.refs.length > 0 && (
-                      <>
-                        {' — see '}
-                        {res.refs.map((ref, idx) => (
-                          <React.Fragment key={ref}>
-                            <a 
-                              href={`/catalog?search=${encodeURIComponent(ref)}`} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="underline hover:text-[var(--crimson-bright)]"
-                            >
-                              {ref}
-                            </a>
-                            {idx < res.refs.length - 1 ? ' and ' : ''}
-                          </React.Fragment>
-                        ))}
-                        {' in the Cipher Catalog.'}
-                      </>
-                    )}
+            {results.map((res, i) => {
+              if (res.type === 'dark_web_hits') {
+                return <DarkWebHitsCard key={i} res={res} />;
+              }
+              return (
+                <div key={i} className="result-card reveal is-visible">
+                  <div className="result-header">
+                    <div className="result-title">{res.title}</div>
+                    <div className="result-severity">{res.severity}</div>
+                  </div>
+                  <div className="result-body font-mono uppercase text-xs">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {res.body}
+                    </ReactMarkdown>
+                  </div>
+                  <div className="result-technique">
+                    <div className="label">MATCHED TECHNIQUE</div>
+                    <div className="font-sans text-xs">
+                      <span className="font-mono">{res.technique}</span>
+                      {res.refs && res.refs.length > 0 && (
+                        <>
+                          {' — see '}
+                          {res.refs.map((ref, idx) => (
+                            <React.Fragment key={ref}>
+                              <a 
+                                href={`/catalog?search=${encodeURIComponent(ref)}`} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="underline hover:text-[var(--crimson-bright)]"
+                              >
+                                {ref}
+                              </a>
+                              {idx < res.refs.length - 1 ? ' and ' : ''}
+                            </React.Fragment>
+                          ))}
+                          {' in the Cipher Catalog.'}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
