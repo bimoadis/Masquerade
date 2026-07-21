@@ -85,11 +85,33 @@ function DarkWebHitsCard({ res }) {
   const hits = res.hits || [];
   const displayHits = isExpanded ? hits : hits.slice(0, 5);
 
+  const mapBucketToHackingTheme = (bucket) => {
+    const lowercase = (bucket || '').toLowerCase();
+    if (lowercase.includes('darknet') || lowercase.includes('tor')) {
+      return 'TOR ANONYMOUS NODE INFILTRATION';
+    }
+    if (lowercase.includes('stealer') || lowercase.includes('logs')) {
+      return 'STEALER CREDENTIAL EXFILTRATION';
+    }
+    if (lowercase.includes('leak') || lowercase.includes('restricted')) {
+      return 'RESTRICTED TARGET ARCHIVE BREACH';
+    }
+    if (lowercase.includes('web') || lowercase.includes('public')) {
+      return 'CLEANNET SURFACE RECONNAISSANCE';
+    }
+    return 'ENVELOPE DECRYPTION PATHWAY';
+  };
+
+  // Convert default title to dynamic target hack description
+  const formattedTitle = (res.title || '')
+    .replace('DARK WEB HITS', '[INFILTRATED NODES]')
+    .replace('RESULT(S)', 'TARGET EXPLOIT HITS');
+
   return (
-    <div className="result-card reveal is-visible" style={{ border: '1px solid var(--cream-ghost)' }}>
-      <div className="result-header" style={{ borderBottom: '1px solid var(--cream-ghost)', paddingBottom: '12px', marginBottom: '16px' }}>
-        <div className="result-title text-emerald-400 font-mono" style={{ letterSpacing: '0.05em' }}>
-          {res.title}
+    <div className="result-card reveal is-visible">
+      <div className="result-header" style={{ borderBottom: '1px solid var(--cream-ghost)', paddingBottom: '12px', marginBottom: '16px', width: '100%' }}>
+        <div className="result-title text-[var(--cream)]">
+          {formattedTitle}
         </div>
       </div>
       
@@ -97,39 +119,39 @@ function DarkWebHitsCard({ res }) {
         {displayHits.map((hit, index) => {
           const matchedTools = findMatchedToolsInHit(hit);
           return (
-            <div key={index} className="p-4" style={{ border: '1px solid var(--cream-ghost)', background: 'rgba(0, 0, 0, 0.25)', borderRadius: '4px' }}>
+            <div key={index} className="p-4" style={{ border: '1px solid var(--cream-ghost)', background: 'rgba(26, 0, 0, 0.4)', borderRadius: '4px' }}>
               <div className="flex items-center gap-3 mb-3 flex-wrap">
                 {hit.bucket && (
-                  <span className="px-2 py-0.5 text-[10px] font-mono border border-emerald-500/50 text-emerald-400 rounded-sm bg-emerald-950/20">
-                    {hit.bucket}
+                  <span className="px-2 py-0.5 text-[10px] font-mono border border-[var(--crimson-bright)]/60 text-[var(--cream)] rounded-sm bg-[var(--void-deeper)]/60">
+                    {mapBucketToHackingTheme(hit.bucket)}
                   </span>
                 )}
                 {hit.date && (
                   <span className="text-[11px] text-gray-400 font-mono">
-                    {hit.date}
+                    TIMESTAMP: {hit.date}
                   </span>
                 )}
               </div>
               
               <div className="font-mono text-sm font-bold text-white mb-2 break-all">
-                {hit.title}
+                FILE: {hit.title}
               </div>
               
-              <div className="text-[11px] text-gray-300 font-mono leading-relaxed max-h-36 overflow-y-auto break-words whitespace-pre-wrap mb-3 p-2 bg-black/30 border border-white/5">
-                {hit.content || 'Content not available'}
+              <div className="text-[11px] text-gray-300 font-mono leading-relaxed max-h-36 overflow-y-auto break-words whitespace-pre-wrap mb-3 p-2 bg-black/35 border border-white/5">
+                {hit.content || '[RAW DATASTREAM SHARDED / DIRECT DECRYPTION QUEUED]'}
               </div>
 
               {/* Skill Matching Highlight */}
               {matchedTools.length > 0 && (
                 <div className="mt-2 pt-2 border-t border-white/5 flex items-center gap-2 flex-wrap">
-                  <span className="text-[10px] text-gray-500 font-sans uppercase tracking-wider">Matched Cipher Skills:</span>
+                  <span className="text-[10px] text-gray-500 font-mono uppercase tracking-wider">[INFILTRATION SKILLS ENGAGED]:</span>
                   {matchedTools.map(tool => (
                     <a
                       key={tool}
                       href={`/catalog?search=${encodeURIComponent(tool)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#8B0000] hover:bg-[#B01010] text-[#F2E8D5] border border-red-900 rounded-sm transition-colors cursor-pointer flex items-center gap-1"
+                      className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#B01010] hover:bg-[#D02020] text-[#F2E8D5] border border-red-500 rounded-sm transition-all duration-200 shadow-[0_0_8px_rgba(176,16,16,0.6)] cursor-pointer flex items-center gap-1"
                     >
                       🛡️ {tool}
                     </a>
@@ -147,14 +169,14 @@ function DarkWebHitsCard({ res }) {
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-xs font-mono underline hover:text-[var(--crimson-bright)] cursor-pointer text-gray-400"
           >
-            {isExpanded ? 'Show less' : `Show all ${hits.length} results`}
+            {isExpanded ? 'Collapse Extracted Hits' : `Show all ${hits.length} extracted hits`}
           </button>
         </div>
       )}
 
       <div className="mt-6 pt-4 flex justify-between items-center text-[10px] font-mono text-gray-500" style={{ borderTop: '1px solid var(--cream-ghost)' }}>
-        <span>{hits.length} source(s) found</span>
-        <span>via Intelligence X</span>
+        <span>[{hits.length} COMPROMISED DATASETS EXTRACTED]</span>
+        <span>ROUTING VECTOR: Intelligence X</span>
       </div>
     </div>
   );
