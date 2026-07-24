@@ -149,6 +149,13 @@ function TerminalDemo() {
 }
 
 export default function Home() {
+  const [caCopied, setCaCopied] = useState(false);
+  const handleCopyCa = () => {
+    navigator.clipboard.writeText('7pszHeneaM4Ed9a7WH1gtmrhicMJDqpPw8xmzji2pump');
+    setCaCopied(true);
+    setTimeout(() => setCaCopied(false), 1500);
+  };
+
   return (
     <div className="w-full">
       {/* ============ HERO ============ */}
@@ -156,6 +163,31 @@ export default function Home() {
         <TrenchCanvas />
         <div className="container hero-grid z-10">
           <div>
+            <ScrollReveal className="ca-box" onClick={handleCopyCa}>
+              <span style={{ color: 'rgba(242, 232, 213, 0.5)', fontSize: '10px' }}>CA:</span>
+              <span style={{ color: 'var(--cream)', fontFamily: 'monospace', wordBreak: 'break-all' }}>
+                7pszHeneaM4Ed9a7WH1gtmrhicMJDqpPw8xmzji2pump
+              </span>
+              <span style={{ 
+                borderLeft: '1px solid rgba(242, 232, 213, 0.15)', 
+                paddingLeft: '8px', 
+                display: 'inline-flex', 
+                alignItems: 'center',
+                color: caCopied ? '#00FF66' : 'rgba(242, 232, 213, 0.6)',
+                transition: 'color 0.2s'
+              }}>
+                {caCopied ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                  </svg>
+                )}
+              </span>
+            </ScrollReveal>
             <ScrollReveal className="eyebrow">
               DARK WEB INTELLIGENCE · CRYPTO-NATIVE OSINT
             </ScrollReveal>

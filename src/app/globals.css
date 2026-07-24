@@ -951,3 +951,31 @@ p.body-text {
   background: var(--cream);
 }
 
+/* CA Box Styling */
+.ca-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  border: 1px solid rgba(242, 232, 213, 0.15);
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+.ca-box:hover {
+  border-color: var(--crimson-bright);
+  background: rgba(139, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.2);
+}
+
+.ca-box:active {
+  transform: scale(0.98);
+}
+
+

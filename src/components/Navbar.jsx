@@ -14,6 +14,9 @@ export default function Navbar() {
         MASQUERADE CIPHER
       </Link>
       <nav>
+        <a href="https://x.com/masqcipher" target="_blank" rel="noopener noreferrer">
+          X
+        </a>
         <Link href="/veil" style={pathname === '/veil' ? { opacity: 1 } : {}}>
           VEIL
         </Link>
@@ -23,9 +26,6 @@ export default function Navbar() {
         <Link href="/#how-it-works">
           HOW IT WORKS
         </Link>
-        <a href="https://x.com/masqcipher" target="_blank" rel="noopener noreferrer">
-          X
-        </a>
       </nav>
     </header>
   );
